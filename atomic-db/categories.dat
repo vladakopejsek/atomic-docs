@@ -1,14 +1,1 @@
-[
-    {
-        "category": "modules",
-        "order": 1
-    },
-    {
-        "category": "readme",
-        "order": 0
-    },
-    {
-        "category": "jsExample",
-        "order": 2
-    }
-]
+[]

@@ -1,1 +1,138 @@
-[]
+[
+    {
+        "component": "button",
+        "category": "components",
+        "description": "Modr\u00e9 tla\u010d\u00edtko. M\u016f\u017ee m\u00edt zaoblen\u00e9 rohy.",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "card-catalog",
+        "category": "components",
+        "description": "Karta ur\u010den\u00e1 pro pou\u017eit\u00ed v katalogu. Obsahuje dva sloupce - category tree, kde jsou kategorie produkt\u016f, a komponentu item-list-browser ve kter\u00e9m je tabulka s vypsan\u00fdmi produkty pro danou kategorii.",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "card-chart",
+        "category": "components",
+        "description": "Karta ur\u010den\u00e1 pro pou\u017eit\u00ed na dashboardu. Obsahuje graf a k n\u011bmu v\u00e1zanou komponentu tab-bar, pomoc\u00ed kter\u00e9 se d\u00e1 p\u0159ep\u00ednat obdob\u00ed zobrazovan\u00fdch dat.",
+        "backgroundColor": "",
+        "order": -1,
+        "has_js": "false"
+    },
+    {
+        "component": "card-orders",
+        "category": "components",
+        "description": "Karta ur\u010den\u00e1 pro pou\u017eit\u00ed na dashboardu. Obsahuje tabulku s nejaktu\u00e1ln\u011bj\u0161\u00edmi objedn\u00e1vkami.",
+        "backgroundColor": "",
+        "order": -2,
+        "has_js": "false"
+    },
+    {
+        "component": "card-simple",
+        "category": "components",
+        "description": "Karta pou\u017e\u00edvan\u00e1 zat\u00edm pouze jako wrapper formul\u00e1\u0159\u016f. Oproti klasick\u00e9 kart\u011b nem\u00e1 header a t\u00edm p\u00e1dem ani nadpis.",
+        "backgroundColor": "",
+        "order": -3,
+        "has_js": "false"
+    },
+    {
+        "component": "card-stats",
+        "category": "components",
+        "description": "Karta ur\u010den\u00e1 pro pou\u017eit\u00ed na dashboardu. Stru\u010dn\u011b a p\u0159ehledn\u011b zobrazuje aktu\u00e1ln\u00ed statistiky e-shopu.",
+        "backgroundColor": "",
+        "order": -4,
+        "has_js": "false"
+    },
+    {
+        "component": "card",
+        "category": "components",
+        "description": "Tato komponenta je v projektu pou\u017eit\u00e1 sp\u00ed\u0161e abstraktn\u011b, proto\u017ee je zat\u00edm v\u017edy v kombinaci s jednou z ostatn\u00edch &quot;card&quot; komponent. Definuje tedy n\u011bjak\u00e9 z\u00e1kladn\u00ed stylov\u00e1n\u00ed t\u011bchto karet.",
+        "backgroundColor": "",
+        "order": -5,
+        "has_js": "false"
+    },
+    {
+        "component": "category-tree",
+        "category": "components",
+        "description": "Category tree je pou\u017eit\u00fd v katalogu. Je to tedy seznam stromov\u00e9 struktury, kter\u00fd slou\u017e\u00ed k proch\u00e1zen\u00ed, editaci a p\u0159id\u00e1v\u00e1n\u00ed kategori\u00ed. Zobrazen\u00ed podkategori\u00ed je zde \u0159e\u0161eno dropdownem jednotliv\u00fdch v\u011btv\u00ed stromu.",
+        "backgroundColor": "",
+        "order": -6,
+        "has_js": "false"
+    },
+    {
+        "component": "dropdown",
+        "category": "components",
+        "description": "Komponenta dropdown je pou\u017eit\u00e1 v\u0161ude kde se d\u00e1 vertik\u00e1ln\u011b otev\u00edrat a zav\u00edrat n\u011bjak\u00fd seznam.",
+        "backgroundColor": "",
+        "order": -7,
+        "has_js": "false"
+    },
+    {
+        "component": "form-default",
+        "category": "components",
+        "description": "Mal\u00e1 komponenta. Slou\u017e\u00ed pouze k aplikaci (sp\u00ed\u0161e pozi\u010dn\u00edch, ne\u017e vzhledov\u00fdch prvk\u016f) z\u00e1kladn\u00edch styl\u016f k formul\u00e1\u0159\u016fm.",
+        "backgroundColor": "",
+        "order": -8,
+        "has_js": "false"
+    },
+    {
+        "component": "header-global",
+        "category": "components",
+        "description": "Horn\u00ed li\u0161ta, kter\u00e1 je viditeln\u00e1 na v\u0161ech str\u00e1nk\u00e1ch krom\u011b loginu. Obsahuje n\u00e1zev administrace a mal\u00fd panel pro u\u017eivatele, kde je zobrazeno jeho jm\u00e9no. Hned po jeho stran\u011b je tla\u010d\u00edtko pro odhl\u00e1\u0161en\u00ed. Ve zobrazen\u00ed pro tablety a telefony je zde tak\u00e9 hamburger ikona pro vysouv\u00e1n\u00ed komponenty side-drawer.",
+        "backgroundColor": "",
+        "order": -9,
+        "has_js": "false"
+    },
+    {
+        "component": "item-list-browser",
+        "category": "components",
+        "description": "Tato komponenta slou\u017e\u00ed k proch\u00e1zen\u00ed tabulky s daty. Obsahuje tedy li\u0161tu pro filtrov\u00e1n\u00ed polo\u017eek a tak\u00e9 pagin\u00e1tor.",
+        "backgroundColor": "",
+        "order": -10,
+        "has_js": "false"
+    },
+    {
+        "component": "nav-global",
+        "category": "components",
+        "description": "Navigace administrace. M\u016f\u017ee obsahovat bu\u010f p\u0159\u00edm\u00e9 odkazy nebo komponenty dropdown, kv\u016fli p\u0159\u00edpadn\u00e9 kategorizaci n\u011bkter\u00fdch str\u00e1nek.",
+        "backgroundColor": "",
+        "order": -11,
+        "has_js": "false"
+    },
+    {
+        "component": "side-drawer",
+        "category": "components",
+        "description": "Panel po lev\u00e9 stran\u011b administrace. Obsahuje komponentu nav-global. P\u0159i \u0161\u00ed\u0159kov\u00e9m zm\u011bn\u0161en\u00ed displeje je vysouvateln\u00fd p\u0159es &quot;hamburger&quot; ikonu, kter\u00e1 je um\u00edst\u011bn\u00e1 v komponent\u011b header-global.",
+        "backgroundColor": "",
+        "order": -12,
+        "has_js": "false"
+    },
+    {
+        "component": "tab-bar",
+        "category": "components",
+        "description": "Pom\u011brn\u011b jednoduch\u00e1 komponenta slou\u017e\u00edc\u00ed k p\u0159ep\u00edn\u00e1n\u00ed obsahu. Zat\u00edm je pou\u017eita pouze v kart\u011b s grafem - komponenta card-chart.",
+        "backgroundColor": "",
+        "order": -13,
+        "has_js": "false"
+    },
+    {
+        "component": "table-items",
+        "category": "components",
+        "description": "Asi nejkomplexn\u011bj\u0161\u00ed komponenta. Jde o tabulku, kter\u00fdch je ale v administraci nejv\u00edc. Slou\u017e\u00ed k zobrazov\u00e1n\u00ed dat. V administraci je tabulka v\u017edy pln\u011bna daty z AJAX dotaz\u016f. Vyskytuje se jak na dashboardu v komponent\u011b card-orders, tak i nap\u0159\u00edklad v katalogu, novink\u00e1ch, parametrech, sr\u00e1nk\u00e1ch, atd.",
+        "backgroundColor": "",
+        "order": -14,
+        "has_js": "false"
+    },
+    {
+        "component": "text-field",
+        "category": "components",
+        "description": "Obsahuje label a input, kter\u00fd m\u016f\u017ee b\u00fdt r\u016fzn\u00e9ho typu. P\u0159i focusu se label posune do lev\u00e9ho rohu.",
+        "backgroundColor": "",
+        "order": -15,
+        "has_js": "false"
+    }
+]

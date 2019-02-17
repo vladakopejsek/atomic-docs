@@ -1,0 +1,1 @@
+<!-- components/components/tab-bar.php -->

@@ -1,0 +1,1 @@
+<!-- components/components/header-global.php -->

@@ -15,6 +15,7 @@
 <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
+
 <script>
     (function($){
         $(window).on("load",function(){
@@ -57,7 +58,7 @@
         $search = $_GET['search'];
         global $search;
 
-        $cat = $components -> get("category", "component", $_GET['search']);
+        $cat = $components->get("category", "component", $_GET['search']);
         global $cat;
 
         $i = 0;
@@ -175,20 +176,24 @@
                 editorjs_<?php echo $i; ?>.setShowPrintMargin(false);
 
             </script>
-        <?php } ?>
+        <?php 
+    } ?>
 
 
-    <?php } ?>
+    <?php 
+} ?>
 
-<?php } else { ?>
+<?php 
+} else { ?>
     <!--index-->
-<?php } ?>
+<?php 
+} ?>
 
 
 <?php
 $filename = '../atomic-foot.php';
 if (file_exists($filename)) {
-    include ("../atomic-foot.php");
+    include("../atomic-foot.php");
 }
 ?>
 

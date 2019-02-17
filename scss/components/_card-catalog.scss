@@ -1,1 +1,59 @@
 /* scss/components/_card-catalog.scss */
+$leftSide: 25rem;
+$rightSide: calc(100% - #{$leftSide});
+/**
+ * BLOK CARD-CATALOG
+ * Používá se v kombinaci s blokem .card a je hlavní částí view katalogu.
+ * Karta obsahuje category tree a tabulku s produkty
+ */
+
+/** Header karty */
+.card-catalog__header {
+    justify-content: flex-start;
+}
+
+/** Nadpis karty */
+.card-catalog__title {
+    background: none;
+    padding: 0;
+}
+
+/** Tělo karty */
+.card-catalog__body {
+    padding: 0;
+}
+
+/** Sloupec karty */
+.card-catalog__col {
+    &:not(:last-child) {
+        border-right: $borderGrey;
+    }
+
+    /** Modifikátor - levý sloupec - category tree */
+    &--left {
+        width: $leftSide;
+        position: relative;
+
+        @media only screen and(max-width: 80em) {
+            width: 20rem;
+        }
+
+        @media only screen and(max-width: 75em) {
+            width: 25%;
+        }
+    }
+
+    /** Modifikátor - pravý sloupec - produkty */
+    &--right {
+        width: $rightSide;
+        position: relative;
+
+        @media only screen and(max-width: 80em) {
+            width: calc(100% - 20rem);
+        }
+
+        @media only screen and(max-width: 75em) {
+            width: 75%;
+        }
+    }
+}

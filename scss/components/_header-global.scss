@@ -1,1 +1,73 @@
 /* scss/components/_header-global.scss */
+/**
+ * BLOK HEADER-GLOBAL
+ * Hlavní header ve kterém je vlevo logo a vpravo jméno uživatele s odhlašovacím tlačítkem.
+ */
+.header-global {
+    background-color: $blue;
+    height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    color: white;
+}
+
+/**
+ * Odkaz v headeru.
+ */
+.header-global__link {
+    display: inline-block;
+}
+
+/**
+ * Modifikátor odkazu - odhlášení uživatele.
+ */
+.header-global__link--logout {
+    background-image: url(./assets/img/icons/exit--white.svg);
+}
+
+/**
+ * Modifikátor odkazu - hamburger tlačítko.
+ */
+.header-global__link--hamburger {
+    background-image: url(./assets/img/icons/menu--white.svg);
+}
+
+/**
+ * Položka seznamu itemů headeru.
+ */
+.header-global__list-item {
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
+/**
+ * Modifikátor - položka seznamu itemů headeru ve které je hamburger tlačítko.
+ */
+.header-global__list-item--hamburger {
+    display: none;
+
+    @media only screen and(max-width: 62.5em) {
+        display: inline-block;
+    }
+}
+
+/**
+ * Nadpis/logo administrace umístěné vlevo v headeru.
+ */
+.header-global__heading {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: $fontSizeH6;
+}
+
+/**
+ * Wrapper obsahu headeru.
+ */
+.header-global__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,1 +1,122 @@
 /* scss/components/_card.scss */
+$headerIconSize: 1.5rem;
+$cardBodyPadding: 0.5rem;
+
+/**
+ * BLOK CARD
+ * V podstatě abstraktní třída, protože je používaná pouze v kombinaci se specifickou kartou.
+ */
+.card {
+    border-radius: rem(4);
+    box-shadow: $boxShadowMaterial;
+    overflow: hidden;
+    transition: border-color $transitionEase;
+    display: flex;
+    flex-direction: column;
+}
+
+/**
+ * Řešení barev karet.
+ * Smyčka prochází předem definované pole barev a podle toho tvoří modifikátory třídy.
+ */
+$colors: (
+    "blue": $blue,
+    "purple": $purpleDark,
+    "red": $red,
+    "pink": $pink,
+    "indigo": $indigo,
+    "teal": $teal,
+    "lime": $lime,
+    "yellow": $yellow
+);
+@each $colorName, $color in $colors {
+    .card--#{$colorName} {
+        border-color: rgba($color, $lightOpacity);
+
+        .card__header {
+            color: white;
+        }
+
+        &:hover {
+            border-color: rgba($color, $lightOpacity * 1.75);
+        }
+
+        .card__header {
+            border-bottom-color: rgba($color, $lightOpacity);
+        }
+
+        .card__refresh-button {
+            &:hover {
+                background-color: rgba(white, $lightOpacity / 2);
+            }
+        }
+
+        .card__header,
+        .tab-bar,
+        .card__growth {
+            background-color: $color;
+            color: white;
+        }
+
+        .card__body {
+            background-color: rgba($color, 0.1);
+        }
+
+        .card__values {
+            border-bottom: $borderWidth solid rgba($color, $lightOpacity);
+        }
+    }
+}
+
+/**
+ * Header karty ve kterém je nadpis karty, ikona a refresh ikona.
+ */
+.card__header {
+    background-color: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+/**
+ * Nadpis karty, který je umístěný v headeru karty.
+ */
+.card__title {
+    background-size: $headerIconSize;
+    background-position: $headerIconSize / 3 center;
+    background-repeat: no-repeat;
+    padding-left: $headerIconSize * 1.5;
+    font-size: $fontSizeH6;
+    font-weight: 500;
+    color: white;
+}
+
+/**
+ * Card body - veškerý obsah karty spadá pod tento element.
+ */
+.card__body {
+    padding: $cardBodyPadding;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+/**
+ * Hlavní číslo, které reprezentuje nejpodstatnější informaci, kterou má karta poskytovat.
+ */
+.card__title-number {
+    font-size: $fontSizeH4;
+    font-weight: 400;
+    font-family: Roboto;
+}
+
+/**
+ * Refresh tlačítko umístěné v headeru karty.
+ */
+.card__refresh-button {
+    background-image: url(./assets/img/icons/refresh--white.svg);
+
+    &:hover {
+        background-color: rgba(black, $lightOpacity / 2);
+    }
+}

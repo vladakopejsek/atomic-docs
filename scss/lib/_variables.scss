@@ -1,0 +1,80 @@
+/**
+ * HLAVNÍ BARVY
+ */
+
+/** Primární */
+$blueLight: #364b77;
+$blue: #00244b;
+$blueDark: #000024;
+
+/** Sekundární */
+$purpleLight: #733f65;
+$purple: #46153b;
+$purpleDark: #220016;
+
+/** Odstíny šedé */
+$greyLight: #f3f3f3;
+$grey: #f2f2f2;
+$greyDark: #d3d3d3;
+
+/** Odstíny bílé */
+$whiteHover: rgba(white, 0.1);
+$whiteActive: rgba(white, 0.3);
+
+/**
+ * OSTATNÍ BARVY
+ */
+$red: #f44336;
+$pink: #e91e63;
+$indigo: #9c27b0;
+$teal: #009688;
+$lime: #cddc39;
+$yellow: #ffeb3b;
+
+/**
+ * TYPOGRAFIE
+ */
+/** Hlavní */
+$fontSizeBase: 1rem;
+$fontSizeSmall: #{rem(14)};
+$fontSizeCaption: #{rem(12)};
+$fontSizeOverline: #{rem(10)};
+
+/** Nadpisy */
+$fontSizeH1: #{rem(96)};
+$fontSizeH2: #{rem(60)};
+$fontSizeH3: #{rem(48)};
+$fontSizeH4: #{rem(34)};
+$fontSizeH5: #{rem(24)};
+$fontSizeH6: #{rem(20)};
+
+/**
+ * TRANSITIONY
+ */
+$transitionEase: 150ms ease;
+$transitionMaterial: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+
+/**
+ * BORDERY
+ */
+$lightOpacity: 0.3;
+$borderWidth: 1px;
+$borderGreyLight: #{$borderWidth} solid #e8e8e8;
+$borderGrey: #{$borderWidth} solid #d1d1d1;
+$borderGreyDark: #{$borderWidth} solid #bababa;
+
+/**
+ * GLOBÁLNÍ VELIKOSTI
+ */
+$headerHeight: 3.5rem;
+$sideDrawerWidth: 16rem;
+$cardSideMargin: 1rem;
+
+/**
+ * STÍNY
+ */
+$boxShadowElevated8: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+	0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+$boxShadowElevated16: 0 8px 10px -5px rgba(0, 0, 0, 0.2),
+	0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+$boxShadowMaterial: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);

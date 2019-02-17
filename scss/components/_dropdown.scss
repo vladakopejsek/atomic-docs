@@ -1,1 +1,21 @@
 /* scss/components/_dropdown.scss */
+/**
+ * BLOK DROPDOWN
+ */
+.dropdown {
+}
+
+// Stav - dropdown je otevřený (pouze jako trigger třída pro javascript)
+.dropdown--open {
+}
+
+// Element bloku dropdown. Je použitý k interakci s dropdownem (otevírání, zavírání).
+.dropdown__anchor {
+    position: relative;
+    overflow: hidden;
+}
+
+// Element bloku dropdown. Obsah dropdownu.
+.dropdown__content {
+    display: none;
+}

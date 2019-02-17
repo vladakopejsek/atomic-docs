@@ -1,1 +1,176 @@
 /* scss/components/_table-items.scss */
+$iconHeight: 2.2rem;
+$iconWrapperWidth: 2 * $iconHeight;
+$rowHeight: 2.5rem;
+
+/**
+ * BLOK TABLE-ITEMS
+ * Tabulka pro zobrazování dat.
+ */
+.table-items {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    table-layout: fixed;
+    position: relative;
+
+    th {
+        font-family: Roboto;
+    }
+
+    th,
+    td {
+        &:not(.table-items__icon-cell) {
+            padding: 0.5rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 1px;
+        }
+    }
+}
+
+/**
+ * Header tabulky
+ */
+.table-items__header {
+    border-bottom: $borderGreyDark;
+    background-color: $greyLight;
+
+    .table-items__edit,
+    .table-items__delete {
+        opacity: 0.5;
+
+        &:hover {
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+    }
+}
+
+/**
+ * Body tabulky.
+ * Slouží jako wrapper pro jednotlivé položky a také jako JS hook.
+ */
+.table-items__list {
+    /**
+	 * Indikace prázdné tabulky
+	 */
+    &--empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: rem(44);
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &:after {
+            content: "Tabulka neobsahuje žádná data!";
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: $fontSizeH4;
+        }
+    }
+}
+
+/**
+ * Řádek tabulky
+ */
+.table-items__item {
+    height: $rowHeight;
+
+    &:not(:last-child) {
+        border-bottom: $borderGreyLight;
+    }
+
+    &--all-empty {
+        display: none;
+        text-align: center;
+        font-size: $fontSizeH4;
+        font-family: Roboto;
+    }
+
+    &--header {
+        height: $rowHeight;
+    }
+
+    &--empty {
+        visibility: hidden;
+
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+    }
+}
+
+/**
+ * Buňka tabulky obsahující ikony
+ */
+.table-items__icon-cell {
+    @media only screen and(max-width: 75em) {
+        width: 20rem;
+    }
+}
+
+/**
+ * Wrapper pro ikony uvnitř buňky
+ */
+.table-items__icon-wrapper {
+    &--controls {
+        display: flex;
+        justify-content: flex-end;
+        height: $iconHeight;
+    }
+}
+
+.table-items__icon-wrapper,
+.table-items__checkbox {
+    @media only screen and(max-width: 75em) {
+        display: none;
+    }
+}
+
+/**
+ * Ikona v tabulce
+ */
+.table-items__icon {
+    width: $iconHeight;
+    height: 100%;
+    border-radius: $iconHeight / 2;
+    background-size: 1.6rem;
+    transition: background-color $transitionEase;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $greyDark;
+    }
+}
+
+/**
+ * Ikona pro úpravu položky tabulky
+ */
+.table-items__edit {
+    background-image: url(./assets/img/icons/edit--blue.svg);
+}
+
+/**
+ * Ikona pro smazání položky tabulky
+ */
+.table-items__delete {
+    background-image: url(./assets/img/icons/delete--blue.svg);
+}
+
+/**
+ * Checkbox položky tabulky
+ */
+.table-items__checkbox {
+    width: 1rem;
+    height: 1rem;
+
+    .mdc-checkbox__background {
+        top: rem(11);
+        left: rem(10);
+    }
+}

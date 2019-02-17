@@ -1,1 +1,157 @@
 /* scss/components/_category-tree.scss */
+$categoryHeight: 3rem;
+$iconHeight: $categoryHeight / 1.25;
+$iconWrapperWidth: 3 * $iconHeight;
+
+/**
+ * CATEGORY TREE BLOK
+ */
+.category-tree {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+
+    // Pozadí otevřeného dropdownu obarvené kvůli lepší přehlednosti
+    .dropdown__content {
+        background-color: rgba(black, 0.1);
+    }
+}
+
+.category-tree {
+    // Stav - při otevřeném dropdownu je potřeba otočit šipku dolů a naopak
+    .dropdown--open > .category-tree__branch-title .category-tree__open-branch {
+        transform: rotateZ(90deg);
+    }
+}
+
+// Jedna samostatná větev
+.category-tree__branch {
+    background-color: white;
+}
+
+// Vždy viditelná část větve - obsahuje dropdown anchor, název kategorie a wrapper pro ikony
+.category-tree__branch-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    border-bottom: $borderGreyLight;
+    position: relative;
+}
+
+// Wrapper pro otevírací šipku, která slouží jako dropdown anchor
+.category-tree__open-branch-wrapper {
+    transition: background-color $transitionEase;
+    width: $categoryHeight;
+    height: 100%;
+
+    &:hover {
+        background-color: $blue;
+
+        .category-tree__open-branch {
+            background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg);
+        }
+    }
+}
+
+// Šipka pro otevírání
+.category-tree__open-branch {
+    transition: background-image $transitionEase, transform $transitionEase;
+    background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+    display: block;
+    width: 100%;
+    height: $categoryHeight;
+}
+
+.dropdown {
+    .category-tree__category-name-wrapper {
+        width: calc(100% - #{$categoryHeight + $iconWrapperWidth});
+
+        @media only screen and(max-width: 75em) {
+            width: calc(100% - #{$categoryHeight});
+        }
+    }
+}
+
+// Wrapper pro název kategorie
+.category-tree__category-name-wrapper {
+    text-align: left;
+    height: calc(#{$categoryHeight} + #{$borderWidth});
+    display: table;
+    width: calc(100% - #{$iconWrapperWidth});
+
+    @media only screen and(max-width: 75em) {
+        width: 100%;
+    }
+}
+
+// Název kategorie; zároveň slouží jako link
+.category-tree__category-name {
+    margin: 0;
+    color: black;
+    text-decoration: none;
+    height: 100%;
+    display: table-cell;
+    transition: background-color $transitionEase;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 1px;
+
+    &:hover {
+        background-color: $greyDark;
+    }
+}
+
+// Wrapper pro ikony pro práci s jednotlivými kategoriemi
+.category-tree__category-controls {
+    display: flex;
+    justify-content: flex-end;
+    width: $iconWrapperWidth;
+    height: $iconHeight;
+
+    @media only screen and(max-width: 75em) {
+        display: none;
+    }
+}
+
+// Ikona pro práci s kategorií
+.category-tree__control-icon {
+    width: $iconHeight;
+    height: 100%;
+    border-radius: 10rem;
+    transition: background-color $transitionEase;
+    background-size: $iconHeight / 1.5;
+    z-index: 1;
+
+    &:hover {
+        background-color: $greyDark;
+    }
+}
+
+// Ikona pro přidání kategorie
+.category-tree__control-icon--add {
+    background-image: url(./assets/img/icons/add--blue.svg);
+}
+
+// Ikona pro editaci kategorie
+.category-tree__control-icon--edit {
+    background-image: url(./assets/img/icons/edit--blue.svg);
+}
+
+// Ikona pro smazání kategorie
+.category-tree__control-icon--delete {
+    background-image: url(./assets/img/icons/delete--blue.svg);
+}
+
+// Pro vizuální odsazení zanořených kategorií
+.category-tree__branch--nested {
+    margin-left: $categoryHeight / 2;
+    border-left: 1px dashed rgba(black, 0.5);
+}

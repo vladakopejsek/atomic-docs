@@ -1,1 +1,121 @@
 /* scss/components/_text-field.scss */
+/**
+ * PROMĚNNÉ
+ */
+$height: 3.5rem;
+$padding: $height / 3;
+
+/**
+ * Komponenta text-field
+ */
+.text-field {
+    position: relative;
+    overflow: hidden;
+    border-radius: rem(3);
+    display: inline-block;
+
+    /**
+	 * Podtrhávací čára
+	 */
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: $purpleDark;
+        left: 0;
+        width: 0;
+        bottom: 0;
+        height: rem(2);
+        transition: width $transitionEase;
+    }
+
+    /**
+	 * Focus - stav řízený javascriptem
+	 */
+    &--active {
+        /**
+		 * Posunutí labelu nahoru tak, aby byl viditelný zadávaný text
+		 */
+        .text-field__label {
+            top: $padding / 3;
+            font-size: $fontSizeCaption;
+            color: $purpleDark;
+        }
+
+        /**
+		 * Podtržení inputu - pouze pro vizuální efekt
+		 */
+        &:after {
+            width: 100%;
+        }
+
+        /**
+		 * Změna pozadí input elementu
+		 */
+        .text-field__input {
+            background-color: $greyDark;
+        }
+    }
+
+    /**
+	 * Text field, který má title posunutý nad input
+	 */
+    &--separated {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .text-field__label {
+            position: static;
+            text-align: left;
+            color: black;
+            font-size: $fontSizeBase;
+            margin-bottom: rem(5);
+        }
+    }
+}
+
+/**
+ * Input/select/textarea element
+ */
+.text-field__input {
+    padding: $padding $padding $padding / 3 $padding / 2;
+    border: none;
+    outline: none;
+    background-color: $greyLight;
+    font-size: $fontSizeBase;
+    font-family: Roboto;
+    border-bottom: rem(2) solid $greyDark;
+    height: $height;
+    width: 100%;
+
+    /**
+	 * Speciální properties pro textarea element
+	 */
+    &--textarea {
+        $minWidth: 12rem;
+        $minHeight: 8rem;
+        min-width: $minWidth;
+        min-height: $minHeight;
+        max-width: $minWidth * 2;
+        max-height: $minHeight * 3;
+        padding-top: $padding * 1.2;
+    }
+
+    /**
+	 * Stav - hover
+	 */
+    &:hover {
+        background-color: $greyDark;
+    }
+}
+
+/**
+ * Label patřící k inputu
+ */
+.text-field__label {
+    left: $padding / 2;
+    pointer-events: none;
+    top: $padding + 0.25rem;
+    transition: top $transitionEase, font-size $transitionEase;
+    color: rgba(black, 0.7);
+    position: absolute;
+}

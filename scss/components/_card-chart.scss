@@ -1,1 +1,67 @@
 /* scss/components/_card-chart.scss */
+/**
+ * BLOK CARD-CHART
+ * Je určená k umístění na dashboard.
+ * Obsahuje graf a tab-bar pro přepínání období zobrazovaných dat grafem.
+ */
+.card-chart__body {
+    padding: 0;
+}
+
+/**
+ * Malý wrappper pro zobrazení růstu/poklesu u karty s grafem.
+ */
+.card-chart__growth {
+    border-radius: 1rem;
+    padding: 0 1.5rem 0 1rem;
+    position: relative;
+    background-color: $blue;
+    color: white;
+
+    /**
+	 * Ikona vzrůstu/poklesu
+	 */
+    &:after {
+        background-position: right center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1rem;
+    }
+}
+
+/**
+ * Wrapper pro graf uvnitř karty.
+ */
+.card-chart__chart-wrapper {
+    width: 100%;
+    height: 20rem;
+}
+
+/**
+ * Element který funguje jako wrapper pro důležitá data, která některé karty zobrazují.
+ */
+.card-chart__values {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/**
+ * Číslo, které zobrazuje hlavní číselný údaj karty
+ */
+.card-chart__title-number {
+    margin-right: 1rem;
+}
+
+/**
+ * Nadpis karty - v tomto případě pouze k nastavení pozadí
+ */
+.card-chart__title {
+    background-image: url(./assets/img/icons/dollar--white.svg);
+}

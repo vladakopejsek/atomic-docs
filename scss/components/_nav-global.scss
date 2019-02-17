@@ -1,1 +1,122 @@
 /* scss/components/_nav-global.scss */
+/**
+ * PROMĚNNÉ
+ */
+$linkIconWidth: 1.5rem;
+$linkIconLeft: 1rem;
+$linkPaddingLeft: $linkIconLeft * 2 + $linkIconWidth;
+
+/**
+ * Blok reprezentující hlavní navigaci
+ * Skládá se z elementů, které přímo odkazují na podstránky a z dalšího bloku dropdown
+ */
+.nav-global {
+    /**
+	 * Vnoření elementů bloku dropdown do bloku nav-global, kvůli odlišení od ostatních dropdownů
+	 */
+
+    // Otevírací šipka umístěná napravo
+    .dropdown__anchor {
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-size: 0.5rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+            width: 2rem;
+            transition: transform $transitionEase;
+        }
+    }
+
+    // Akce - otevřený dropdown
+    .dropdown--open {
+        .dropdown__anchor {
+            // Otočení šipky dolů
+            &:after {
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+
+    // Stav - element bloku nav-global je aktivní
+    .dropdown__anchor.nav-global__link--active {
+        // Bílá šipka kvůli změně pozadí aktivní položky
+        &:after {
+            background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg);
+        }
+    }
+}
+
+// Obecný element bloku nav-global
+.nav-global__link {
+    display: block;
+    transition: background-color $transitionEase;
+    position: relative;
+    padding: 1rem 0 1rem $linkPaddingLeft;
+
+    &:hover {
+        background-color: $greyDark;
+    }
+
+    // Element bloku nav-global, která stojí sama o sobě a není dropdown
+    &--separate {
+        &:before {
+            content: "";
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            top: 0;
+            bottom: 0;
+            left: $linkIconLeft;
+            width: $linkIconWidth;
+        }
+    }
+
+    // Element bloku nav-global, který je součástí dropdownu
+    &--inside-dropdown {
+        padding-left: $linkPaddingLeft / 2;
+    }
+
+    // Stav - Element bloku nav-global je aktivní
+    &--active {
+        background-color: $blueLight;
+        color: white;
+
+        // Zvýraznění položky při hoveru
+        &:hover {
+            background-color: $blueLight;
+        }
+    }
+
+    /**
+	 * Ikony pro jednotlivé položky navigace
+	 */
+    $icons: (
+        "home": "home",
+        "content": "note",
+        "catalog": "view-list",
+        "orders": "receipt",
+        "customers": "people",
+        "user-accounts": "person-box",
+        "dev-tools": "god-mode"
+    );
+
+    @each $className, $icon in $icons {
+        &--#{$className} {
+            &:before {
+                background-image: url(./assets/img/icons/#{$icon}--blue.svg);
+            }
+        }
+
+        &--#{$className}.nav-global__link--active {
+            &:before {
+                background-image: url(./assets/img/icons/#{$icon}--white.svg);
+            }
+        }
+    }
+}

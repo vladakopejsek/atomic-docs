@@ -1,1 +1,189 @@
 /* scss/components/_item-list-browser.scss */
+$barHeight: 3rem;
+
+/**
+ * BLOK ITEM-LIST-BROWSER
+ * Wrapper pro tabulku s daty.
+ * Umožňuje interagovat s tabulkou a procházet jí - obsahuje vyhledávací panel a page listing.
+ * Může být součástí nějaké jiné komponenty nebo stát sám o sobě.
+ */
+.item-list-browser {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+
+    /**
+	 * Modifikátor - pokud stojí sám o sobě a není součástí jiné komponenty.
+	 */
+    &--independent {
+        border: $borderGrey;
+        border-radius: rem(4);
+        box-shadow: $boxShadowMaterial;
+    }
+
+    &--users,
+    &--admin-control,
+    &--orders {
+        .item-list-browser__add-item {
+            display: none;
+        }
+    }
+}
+
+/**
+ * Lišta
+ */
+.item-list-browser__bar {
+    height: $barHeight;
+    background-color: $grey;
+    display: flex;
+
+    /**
+	 * Modifikátor - lišta obsahující page listing.
+	 */
+    &--listing {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/**
+ * Vyhledávací form.
+ */
+.item-list-browser__search-form {
+    flex: 1;
+}
+
+/**
+ * Tlačítka pro práci s kategoriemi
+ */
+.item-list-browser__products-controls {
+    justify-content: flex-end;
+}
+
+.item-list-browser__search-form,
+.item-list-browser__products-controls {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/**
+ * Tlačítko pro přidání produktu
+ */
+.item-list-browser__add-item {
+    $iconWidth: 2.5rem;
+    height: 100%;
+    background-color: $blueLight;
+    transition: background-color $transitionEase;
+    color: white;
+    font-size: $fontSizeBase;
+    padding: 0 $iconWidth 0 1rem;
+    line-height: $barHeight;
+    display: inline-flex;
+    position: relative;
+
+    &:after {
+        content: "";
+        height: 100%;
+        width: $iconWidth;
+        position: absolute;
+        right: 0;
+        background-image: url(./assets/img/icons/add--white.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &:hover {
+        background-color: $blueDark;
+    }
+}
+
+/**
+ * Šipka pro listování tabulkou.
+ */
+.item-list-browser__listing-arrow {
+    width: $barHeight;
+    height: 100%;
+    transition: background-color $transitionEase;
+
+    /**
+	 * Modifikátor - šipka "zpět"
+	 */
+    &--back {
+        background-image: url(./assets/img/icons/arrow-back--blue.svg);
+    }
+
+    /**
+	 * Modifikátor - šipka "následující"
+	 */
+    &--forward {
+        background-image: url(./assets/img/icons/arrow-forward--blue.svg);
+    }
+
+    &:hover {
+        background-color: $greyDark;
+    }
+}
+
+/**
+ * Input vyhledávacího formu
+ */
+.item-list-browser__input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Roboto;
+
+    &:not(:last-child) {
+        border-right: $borderGrey;
+    }
+
+    /**
+	 * Modifikátor - select input
+	 */
+    &--select {
+        flex: 10%;
+    }
+
+    /**
+	 * Modifikátor - text input
+	 */
+    &--search {
+        flex: 90%;
+        padding: 0 0.5rem;
+        transition: background-color $transitionEase;
+
+        &:focus {
+            background-color: $greyDark;
+        }
+    }
+
+    /**
+	 * Modifikátor - submit input
+	 */
+    &--submit {
+        background-image: url(./assets/img/icons/search--blue.svg);
+        width: $barHeight;
+        transition: background-color $transitionEase;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $greyDark;
+        }
+    }
+}
+
+/**
+ * Wrapper pro tabulku s daty
+ */
+.item-list-browser__items {
+    height: calc(100% - #{$barHeight * 2});
+    border-top: $borderGreyDark;
+    border-bottom: $borderGreyDark;
+    overflow-y: scroll;
+}

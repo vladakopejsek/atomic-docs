@@ -1,1 +1,41 @@
 /* scss/components/_card-simple.scss */
+/**
+ * BLOK CARD-SIMPLE
+ * Tato karta se používá zatím pouze jako wrapper pro form.
+ * Oproti normální kartě nemá nadpis ani header.
+ */
+.card-simple {
+    border: none;
+    display: block;
+    position: relative;
+    flex-basis: auto;
+    width: 60rem;
+    align-self: center;
+
+    /**
+	 * Vizuální prvek - modrý pruh na topu karty
+	 */
+    &:before {
+        z-index: -1;
+        content: "";
+        height: rem(20);
+        background-color: $blue;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/**
+ * Tělo karty
+ */
+.card-simple__body {
+    border-top-left-radius: rem(4);
+    border-top-right-radius: rem(4);
+    margin-top: rem(10);
+    position: relative;
+    background-color: white;
+    border: none;
+}

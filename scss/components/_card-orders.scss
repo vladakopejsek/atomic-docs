@@ -1,1 +1,25 @@
 /* scss/components/_card-orders.scss */
+/**
+ * BLOK CARD-ORDERS
+ * Karta určená k umístění na dashboard.
+ * Obsahuje tabulku s nejaktuálnějšími objednávkami.
+ */
+
+/**
+  * Tělo karty
+  */
+.card-orders__body {
+    padding: 0;
+
+    & > table {
+        width: calc(100% + #{$cardBodyPadding * 2});
+        height: calc(100% + #{$cardBodyPadding});
+    }
+}
+
+/**
+ * Nadpis karty - v tomto případě se zde pouze nastavuje ikona
+ */
+.card-orders__title {
+    background-image: url(./assets/img/icons/receipt--white.svg);
+}

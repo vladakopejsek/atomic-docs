@@ -1,1 +1,33 @@
 /* scss/components/_button.scss */
+/**
+ * BLOK BUTTON
+ */
+.button {
+    outline: none;
+    padding: rem(10) 2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: $fontSizeSmall;
+    transition: background-color $transitionEase;
+    background-color: $blue;
+    box-shadow: $boxShadowMaterial;
+    text-decoration: none;
+
+    /** Modifikátor - zaoblený button */
+    &--rounded {
+        border-radius: rem(3);
+    }
+
+    /** Modifikátor - modrý button */
+    &--blue {
+        background-color: $blue;
+        color: white;
+
+        &:hover {
+            background-color: $purpleDark;
+        }
+    }
+}

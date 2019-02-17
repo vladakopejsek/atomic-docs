@@ -1,1 +1,50 @@
 /* scss/components/_tab-bar.scss */
+/**
+ * BLOK TAB-BAR
+ */
+.tab-bar {
+    display: flex;
+    background-color: $blue;
+}
+
+/**
+ * Položka bloku tab-bar
+ */
+.tab-bar__item {
+    flex: 1;
+}
+
+/**
+ * Link v položce bloku tab-bar
+ */
+.tab-bar__link {
+    font-size: $fontSizeBase;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding: rem(10) 0;
+    position: relative;
+    color: white;
+
+    /** Stav - hover na link */
+    &:hover {
+        background-color: $whiteHover;
+    }
+}
+
+/**
+ * Aktuálně aktivní vybraná položka bloku tab-bar
+ */
+.tab-bar__link--selected {
+    background-color: $whiteActive;
+
+    &:after {
+        content: "";
+        height: rem(3);
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

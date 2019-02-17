@@ -1,1 +1,77 @@
 /* scss/components/_card-stats.scss */
+/**
+ * BLOK CARD-STATS
+ * Tato karta je určená pro použití na dashboardu.
+ * Stručně a přehledně zobrazuje hlavní statistiky e-shopu.
+ */
+.card-stats__title {
+    background-image: url(./assets/img/icons/data--white.svg);
+}
+
+/**
+ * Tělo karty
+ */
+.card-stats__body {
+    display: flex;
+    padding: 2rem 0;
+}
+
+/**
+ * Položka karty - údaj statistik
+ */
+.card-stats__item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        border-right: $borderGreyDark;
+    }
+
+    &:before {
+        $size: 3.5rem;
+        content: "";
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: $size;
+        height: $size;
+    }
+
+    /**
+	 * Ikony
+	 */
+    &:nth-child(1) {
+        &:before {
+            background-image: url(./assets/img/icons/receipt--purple.svg);
+        }
+    }
+
+    &:nth-child(2) {
+        &:before {
+            background-image: url(./assets/img/icons/dollar--purple.svg);
+        }
+    }
+
+    &:nth-child(3) {
+        &:before {
+            background-image: url(./assets/img/icons/people--purple.svg);
+        }
+    }
+
+    &:nth-child(4) {
+        &:before {
+            background-image: url(./assets/img/icons/trending-up--purple.svg);
+        }
+    }
+}
+
+/**
+ * Popisek karty.
+ */
+.card-stats__description {
+    font-family: Roboto;
+    font-size: $fontSizeH6;
+}

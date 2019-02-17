@@ -1,2 +1,1507 @@
+@charset "UTF-8";
+/**
+ * Převod pixelů na remy
+ */
+/**
+ * Převod pixelů na emy
+ */
+/**
+ * HLAVNÍ BARVY
+ */
+/** Primární */
+/** Sekundární */
+/** Odstíny šedé */
+/** Odstíny bílé */
+/**
+ * OSTATNÍ BARVY
+ */
+/**
+ * TYPOGRAFIE
+ */
+/** Hlavní */
+/** Nadpisy */
+/**
+ * TRANSITIONY
+ */
+/**
+ * BORDERY
+ */
+/**
+ * GLOBÁLNÍ VELIKOSTI
+ */
+/**
+ * STÍNY
+ */
+.main {
+  height: calc(100vh - 3.5rem);
+  display: flex;
+  overflow: hidden; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtYWluLmNzcyJ9 */
+.content {
+  width: calc(100% - 16rem);
+  padding: 2.5rem;
+  box-sizing: border-box;
+  overflow-y: scroll; }
+  @media only screen and (max-width: 62.5em) {
+    .content {
+      width: 100%; } }
+
+.content,
+.side-drawer {
+  height: 100%; }
+
+/**
+ * GRID LAYOUT
+ */
+.grid-container {
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1.5rem; }
+
+.grid-container--col12 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+
+.grid-item {
+  display: inline-grid; }
+
+.grid-item--colspan1 {
+  grid-column: span 1; }
+
+.grid-item--col1 {
+  grid-column: 1; }
+
+.grid-item--rowspan1 {
+  grid-row: span 1; }
+
+.grid-item--row1 {
+  grid-row: 1; }
+
+.grid-item--colspan2 {
+  grid-column: span 2; }
+
+.grid-item--col2 {
+  grid-column: 2; }
+
+.grid-item--rowspan2 {
+  grid-row: span 2; }
+
+.grid-item--row2 {
+  grid-row: 2; }
+
+.grid-item--colspan3 {
+  grid-column: span 3; }
+
+.grid-item--col3 {
+  grid-column: 3; }
+
+.grid-item--rowspan3 {
+  grid-row: span 3; }
+
+.grid-item--row3 {
+  grid-row: 3; }
+
+.grid-item--colspan4 {
+  grid-column: span 4; }
+
+.grid-item--col4 {
+  grid-column: 4; }
+
+.grid-item--rowspan4 {
+  grid-row: span 4; }
+
+.grid-item--row4 {
+  grid-row: 4; }
+
+.grid-item--colspan5 {
+  grid-column: span 5; }
+
+.grid-item--col5 {
+  grid-column: 5; }
+
+.grid-item--rowspan5 {
+  grid-row: span 5; }
+
+.grid-item--row5 {
+  grid-row: 5; }
+
+.grid-item--colspan6 {
+  grid-column: span 6; }
+
+.grid-item--col6 {
+  grid-column: 6; }
+
+.grid-item--rowspan6 {
+  grid-row: span 6; }
+
+.grid-item--row6 {
+  grid-row: 6; }
+
+.grid-item--colspan7 {
+  grid-column: span 7; }
+
+.grid-item--col7 {
+  grid-column: 7; }
+
+.grid-item--rowspan7 {
+  grid-row: span 7; }
+
+.grid-item--row7 {
+  grid-row: 7; }
+
+.grid-item--colspan8 {
+  grid-column: span 8; }
+
+.grid-item--col8 {
+  grid-column: 8; }
+
+.grid-item--rowspan8 {
+  grid-row: span 8; }
+
+.grid-item--row8 {
+  grid-row: 8; }
+
+.grid-item--colspan9 {
+  grid-column: span 9; }
+
+.grid-item--col9 {
+  grid-column: 9; }
+
+.grid-item--rowspan9 {
+  grid-row: span 9; }
+
+.grid-item--row9 {
+  grid-row: 9; }
+
+.grid-item--colspan10 {
+  grid-column: span 10; }
+
+.grid-item--col10 {
+  grid-column: 10; }
+
+.grid-item--rowspan10 {
+  grid-row: span 10; }
+
+.grid-item--row10 {
+  grid-row: 10; }
+
+.grid-item--colspan11 {
+  grid-column: span 11; }
+
+.grid-item--col11 {
+  grid-column: 11; }
+
+.grid-item--rowspan11 {
+  grid-row: span 11; }
+
+.grid-item--row11 {
+  grid-row: 11; }
+
+.grid-item--colspan12 {
+  grid-column: span 12; }
+
+.grid-item--col12 {
+  grid-column: 12; }
+
+.grid-item--rowspan12 {
+  grid-row: span 12; }
+
+.grid-item--row12 {
+  grid-row: 12; }
+
+/** TEXT **/
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-center {
+  text-align: center; }
+
+.text-color__white {
+  color: white; }
+
+/** ALIGNMENT **/
+.block {
+  display: block; }
+
+.img {
+  width: 100%;
+  height: auto; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/** OTHER **/
+.inline-wrapper {
+  font-size: 0; }
+
+.fullscreen-wrapper {
+  height: 100vh; }
+  @media only screen and (max-width: 32.5em) {
+    .fullscreen-wrapper {
+      padding: 0 0.5rem; } }
+
+.height--full {
+  height: 100%; }
+
+/** VISUAL **/
+.radial-gradient {
+  background: radial-gradient(#220016, #00244b); }
+
+.background-purple {
+  background-color: #220016; }
+
+.background-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 0; }
+
+.background-image--contain {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 0; }
+
+/**
+ * FLEX
+ */
+.flex {
+  display: flex; }
+
+.flex__basis--full {
+  flex-basis: 100%; }
+
+.flex__direction--column {
+  flex-direction: column; }
+
+.flex__direction--row {
+  flex-direction: row; }
+
+.flex__justify-content--center {
+  justify-content: center; }
+
+.flex__justify-content--space-between {
+  justify-content: space-between; }
+
+.flex__align-items--center {
+  align-items: center; }
+
+/* scss/components/_button.scss */
+/**
+ * BLOK BUTTON
+ */
+.button {
+  outline: none;
+  padding: 0.625rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background-color 150ms ease;
+  background-color: #00244b;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  /** Modifikátor - zaoblený button */
+  /** Modifikátor - modrý button */ }
+  .button--rounded {
+    border-radius: 0.1875rem; }
+  .button--blue {
+    background-color: #00244b;
+    color: white; }
+    .button--blue:hover {
+      background-color: #220016; }
+
+/* scss/components/_card.scss */
+/**
+ * BLOK CARD
+ * V podstatě abstraktní třída, protože je používaná pouze v kombinaci se specifickou kartou.
+ */
+.card {
+  border-radius: 0.25rem;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: border-color 150ms ease;
+  display: flex;
+  flex-direction: column; }
+
+/**
+ * Řešení barev karet.
+ * Smyčka prochází předem definované pole barev a podle toho tvoří modifikátory třídy.
+ */
+.card--blue {
+  border-color: rgba(0, 36, 75, 0.3); }
+  .card--blue .card__header {
+    color: white; }
+  .card--blue:hover {
+    border-color: rgba(0, 36, 75, 0.525); }
+  .card--blue .card__header {
+    border-bottom-color: rgba(0, 36, 75, 0.3); }
+  .card--blue .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--blue .card__header,
+  .card--blue .tab-bar,
+  .card--blue .card__growth {
+    background-color: #00244b;
+    color: white; }
+  .card--blue .card__body {
+    background-color: rgba(0, 36, 75, 0.1); }
+  .card--blue .card__values {
+    border-bottom: 1px solid rgba(0, 36, 75, 0.3); }
+
+.card--purple {
+  border-color: rgba(34, 0, 22, 0.3); }
+  .card--purple .card__header {
+    color: white; }
+  .card--purple:hover {
+    border-color: rgba(34, 0, 22, 0.525); }
+  .card--purple .card__header {
+    border-bottom-color: rgba(34, 0, 22, 0.3); }
+  .card--purple .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--purple .card__header,
+  .card--purple .tab-bar,
+  .card--purple .card__growth {
+    background-color: #220016;
+    color: white; }
+  .card--purple .card__body {
+    background-color: rgba(34, 0, 22, 0.1); }
+  .card--purple .card__values {
+    border-bottom: 1px solid rgba(34, 0, 22, 0.3); }
+
+.card--red {
+  border-color: rgba(244, 67, 54, 0.3); }
+  .card--red .card__header {
+    color: white; }
+  .card--red:hover {
+    border-color: rgba(244, 67, 54, 0.525); }
+  .card--red .card__header {
+    border-bottom-color: rgba(244, 67, 54, 0.3); }
+  .card--red .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--red .card__header,
+  .card--red .tab-bar,
+  .card--red .card__growth {
+    background-color: #f44336;
+    color: white; }
+  .card--red .card__body {
+    background-color: rgba(244, 67, 54, 0.1); }
+  .card--red .card__values {
+    border-bottom: 1px solid rgba(244, 67, 54, 0.3); }
+
+.card--pink {
+  border-color: rgba(233, 30, 99, 0.3); }
+  .card--pink .card__header {
+    color: white; }
+  .card--pink:hover {
+    border-color: rgba(233, 30, 99, 0.525); }
+  .card--pink .card__header {
+    border-bottom-color: rgba(233, 30, 99, 0.3); }
+  .card--pink .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--pink .card__header,
+  .card--pink .tab-bar,
+  .card--pink .card__growth {
+    background-color: #e91e63;
+    color: white; }
+  .card--pink .card__body {
+    background-color: rgba(233, 30, 99, 0.1); }
+  .card--pink .card__values {
+    border-bottom: 1px solid rgba(233, 30, 99, 0.3); }
+
+.card--indigo {
+  border-color: rgba(156, 39, 176, 0.3); }
+  .card--indigo .card__header {
+    color: white; }
+  .card--indigo:hover {
+    border-color: rgba(156, 39, 176, 0.525); }
+  .card--indigo .card__header {
+    border-bottom-color: rgba(156, 39, 176, 0.3); }
+  .card--indigo .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--indigo .card__header,
+  .card--indigo .tab-bar,
+  .card--indigo .card__growth {
+    background-color: #9c27b0;
+    color: white; }
+  .card--indigo .card__body {
+    background-color: rgba(156, 39, 176, 0.1); }
+  .card--indigo .card__values {
+    border-bottom: 1px solid rgba(156, 39, 176, 0.3); }
+
+.card--teal {
+  border-color: rgba(0, 150, 136, 0.3); }
+  .card--teal .card__header {
+    color: white; }
+  .card--teal:hover {
+    border-color: rgba(0, 150, 136, 0.525); }
+  .card--teal .card__header {
+    border-bottom-color: rgba(0, 150, 136, 0.3); }
+  .card--teal .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--teal .card__header,
+  .card--teal .tab-bar,
+  .card--teal .card__growth {
+    background-color: #009688;
+    color: white; }
+  .card--teal .card__body {
+    background-color: rgba(0, 150, 136, 0.1); }
+  .card--teal .card__values {
+    border-bottom: 1px solid rgba(0, 150, 136, 0.3); }
+
+.card--lime {
+  border-color: rgba(205, 220, 57, 0.3); }
+  .card--lime .card__header {
+    color: white; }
+  .card--lime:hover {
+    border-color: rgba(205, 220, 57, 0.525); }
+  .card--lime .card__header {
+    border-bottom-color: rgba(205, 220, 57, 0.3); }
+  .card--lime .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--lime .card__header,
+  .card--lime .tab-bar,
+  .card--lime .card__growth {
+    background-color: #cddc39;
+    color: white; }
+  .card--lime .card__body {
+    background-color: rgba(205, 220, 57, 0.1); }
+  .card--lime .card__values {
+    border-bottom: 1px solid rgba(205, 220, 57, 0.3); }
+
+.card--yellow {
+  border-color: rgba(255, 235, 59, 0.3); }
+  .card--yellow .card__header {
+    color: white; }
+  .card--yellow:hover {
+    border-color: rgba(255, 235, 59, 0.525); }
+  .card--yellow .card__header {
+    border-bottom-color: rgba(255, 235, 59, 0.3); }
+  .card--yellow .card__refresh-button:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .card--yellow .card__header,
+  .card--yellow .tab-bar,
+  .card--yellow .card__growth {
+    background-color: #ffeb3b;
+    color: white; }
+  .card--yellow .card__body {
+    background-color: rgba(255, 235, 59, 0.1); }
+  .card--yellow .card__values {
+    border-bottom: 1px solid rgba(255, 235, 59, 0.3); }
+
+/**
+ * Header karty ve kterém je nadpis karty, ikona a refresh ikona.
+ */
+.card__header {
+  background-color: #00244b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem; }
+
+/**
+ * Nadpis karty, který je umístěný v headeru karty.
+ */
+.card__title {
+  background-size: 1.5rem;
+  background-position: 0.5rem center;
+  background-repeat: no-repeat;
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white; }
+
+/**
+ * Card body - veškerý obsah karty spadá pod tento element.
+ */
+.card__body {
+  padding: 0.5rem;
+  text-align: center;
+  flex-basis: 100%; }
+
+/**
+ * Hlavní číslo, které reprezentuje nejpodstatnější informaci, kterou má karta poskytovat.
+ */
+.card__title-number {
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-family: Roboto; }
+
+/**
+ * Refresh tlačítko umístěné v headeru karty.
+ */
+.card__refresh-button {
+  background-image: url(./assets/img/icons/refresh--white.svg); }
+  .card__refresh-button:hover {
+    background-color: rgba(0, 0, 0, 0.15); }
+
+/* scss/components/_card-catalog.scss */
+/**
+ * BLOK CARD-CATALOG
+ * Používá se v kombinaci s blokem .card a je hlavní částí view katalogu.
+ * Karta obsahuje category tree a tabulku s produkty
+ */
+/** Header karty */
+.card-catalog__header {
+  justify-content: flex-start; }
+
+/** Nadpis karty */
+.card-catalog__title {
+  background: none;
+  padding: 0; }
+
+/** Tělo karty */
+.card-catalog__body {
+  padding: 0; }
+
+/** Sloupec karty */
+.card-catalog__col {
+  /** Modifikátor - levý sloupec - category tree */
+  /** Modifikátor - pravý sloupec - produkty */ }
+  .card-catalog__col:not(:last-child) {
+    border-right: 1px solid #d1d1d1; }
+  .card-catalog__col--left {
+    width: 25rem;
+    position: relative; }
+    @media only screen and (max-width: 80em) {
+      .card-catalog__col--left {
+        width: 20rem; } }
+    @media only screen and (max-width: 75em) {
+      .card-catalog__col--left {
+        width: 25%; } }
+  .card-catalog__col--right {
+    width: calc(100% - 25rem);
+    position: relative; }
+    @media only screen and (max-width: 80em) {
+      .card-catalog__col--right {
+        width: calc(100% - 20rem); } }
+    @media only screen and (max-width: 75em) {
+      .card-catalog__col--right {
+        width: 75%; } }
+
+/* scss/components/_card-chart.scss */
+/**
+ * BLOK CARD-CHART
+ * Je určená k umístění na dashboard.
+ * Obsahuje graf a tab-bar pro přepínání období zobrazovaných dat grafem.
+ */
+.card-chart__body {
+  padding: 0; }
+
+/**
+ * Malý wrappper pro zobrazení růstu/poklesu u karty s grafem.
+ */
+.card-chart__growth {
+  border-radius: 1rem;
+  padding: 0 1.5rem 0 1rem;
+  position: relative;
+  background-color: #00244b;
+  color: white;
+  /**
+	 * Ikona vzrůstu/poklesu
+	 */ }
+  .card-chart__growth:after {
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1rem; }
+
+/**
+ * Wrapper pro graf uvnitř karty.
+ */
+.card-chart__chart-wrapper {
+  width: 100%;
+  height: 20rem; }
+
+/**
+ * Element který funguje jako wrapper pro důležitá data, která některé karty zobrazují.
+ */
+.card-chart__values {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem; }
+
+/**
+ * Číslo, které zobrazuje hlavní číselný údaj karty
+ */
+.card-chart__title-number {
+  margin-right: 1rem; }
+
+/**
+ * Nadpis karty - v tomto případě pouze k nastavení pozadí
+ */
+.card-chart__title {
+  background-image: url(./assets/img/icons/dollar--white.svg); }
+
+/* scss/components/_card-orders.scss */
+/**
+ * BLOK CARD-ORDERS
+ * Karta určená k umístění na dashboard.
+ * Obsahuje tabulku s nejaktuálnějšími objednávkami.
+ */
+/**
+  * Tělo karty
+  */
+.card-orders__body {
+  padding: 0; }
+  .card-orders__body > table {
+    width: calc(100% + 1rem);
+    height: calc(100% + 0.5rem); }
+
+/**
+ * Nadpis karty - v tomto případě se zde pouze nastavuje ikona
+ */
+.card-orders__title {
+  background-image: url(./assets/img/icons/receipt--white.svg); }
+
+/* scss/components/_card-simple.scss */
+/**
+ * BLOK CARD-SIMPLE
+ * Tato karta se používá zatím pouze jako wrapper pro form.
+ * Oproti normální kartě nemá nadpis ani header.
+ */
+.card-simple {
+  border: none;
+  display: block;
+  position: relative;
+  flex-basis: auto;
+  width: 60rem;
+  align-self: center;
+  /**
+	 * Vizuální prvek - modrý pruh na topu karty
+	 */ }
+  .card-simple:before {
+    z-index: -1;
+    content: "";
+    height: 1.25rem;
+    background-color: #00244b;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0; }
+
+/**
+ * Tělo karty
+ */
+.card-simple__body {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  margin-top: 0.625rem;
+  position: relative;
+  background-color: white;
+  border: none; }
+
+/* scss/components/_card-stats.scss */
+/**
+ * BLOK CARD-STATS
+ * Tato karta je určená pro použití na dashboardu.
+ * Stručně a přehledně zobrazuje hlavní statistiky e-shopu.
+ */
+.card-stats__title {
+  background-image: url(./assets/img/icons/data--white.svg); }
+
+/**
+ * Tělo karty
+ */
+.card-stats__body {
+  display: flex;
+  padding: 2rem 0; }
+
+/**
+ * Položka karty - údaj statistik
+ */
+.card-stats__item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /**
+	 * Ikony
+	 */ }
+  .card-stats__item:not(:last-child) {
+    border-right: 1px solid #bababa; }
+  .card-stats__item:before {
+    content: "";
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 3.5rem;
+    height: 3.5rem; }
+  .card-stats__item:nth-child(1):before {
+    background-image: url(./assets/img/icons/receipt--purple.svg); }
+  .card-stats__item:nth-child(2):before {
+    background-image: url(./assets/img/icons/dollar--purple.svg); }
+  .card-stats__item:nth-child(3):before {
+    background-image: url(./assets/img/icons/people--purple.svg); }
+  .card-stats__item:nth-child(4):before {
+    background-image: url(./assets/img/icons/trending-up--purple.svg); }
+
+/**
+ * Popisek karty.
+ */
+.card-stats__description {
+  font-family: Roboto;
+  font-size: 1.25rem; }
+
+/* scss/components/_category-tree.scss */
+/**
+ * CATEGORY TREE BLOK
+ */
+.category-tree {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll; }
+  .category-tree .dropdown__content {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.category-tree .dropdown--open > .category-tree__branch-title .category-tree__open-branch {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg); }
+
+.category-tree__branch {
+  background-color: white; }
+
+.category-tree__branch-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative; }
+
+.category-tree__open-branch-wrapper {
+  transition: background-color 150ms ease;
+  width: 3rem;
+  height: 100%; }
+  .category-tree__open-branch-wrapper:hover {
+    background-color: #00244b; }
+    .category-tree__open-branch-wrapper:hover .category-tree__open-branch {
+      background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg); }
+
+.category-tree__open-branch {
+  transition: background-image 150ms ease, -webkit-transform 150ms ease;
+  transition: background-image 150ms ease, transform 150ms ease;
+  transition: background-image 150ms ease, transform 150ms ease, -webkit-transform 150ms ease;
+  background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+  display: block;
+  width: 100%;
+  height: 3rem; }
+
+.dropdown .category-tree__category-name-wrapper {
+  width: calc(100% - 10.2rem); }
+  @media only screen and (max-width: 75em) {
+    .dropdown .category-tree__category-name-wrapper {
+      width: calc(100% - 3rem); } }
+
+.category-tree__category-name-wrapper {
+  text-align: left;
+  height: calc(3rem + 1px);
+  display: table;
+  width: calc(100% - 7.2rem); }
+  @media only screen and (max-width: 75em) {
+    .category-tree__category-name-wrapper {
+      width: 100%; } }
+
+.category-tree__category-name {
+  margin: 0;
+  color: black;
+  text-decoration: none;
+  height: 100%;
+  display: table-cell;
+  transition: background-color 150ms ease;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 1px; }
+  .category-tree__category-name:hover {
+    background-color: #d3d3d3; }
+
+.category-tree__category-controls {
+  display: flex;
+  justify-content: flex-end;
+  width: 7.2rem;
+  height: 2.4rem; }
+  @media only screen and (max-width: 75em) {
+    .category-tree__category-controls {
+      display: none; } }
+
+.category-tree__control-icon {
+  width: 2.4rem;
+  height: 100%;
+  border-radius: 10rem;
+  transition: background-color 150ms ease;
+  background-size: 1.6rem;
+  z-index: 1; }
+  .category-tree__control-icon:hover {
+    background-color: #d3d3d3; }
+
+.category-tree__control-icon--add {
+  background-image: url(./assets/img/icons/add--blue.svg); }
+
+.category-tree__control-icon--edit {
+  background-image: url(./assets/img/icons/edit--blue.svg); }
+
+.category-tree__control-icon--delete {
+  background-image: url(./assets/img/icons/delete--blue.svg); }
+
+.category-tree__branch--nested {
+  margin-left: 1.5rem;
+  border-left: 1px dashed rgba(0, 0, 0, 0.5); }
+
+/* scss/components/_dropdown.scss */
+/**
+ * BLOK DROPDOWN
+ */
+.dropdown__anchor {
+  position: relative;
+  overflow: hidden; }
+
+.dropdown__content {
+  display: none; }
+
+/* scss/components/_form-default.scss */
+/**
+ * BLOK FORM-DEFAULT
+ * Základní nastavení pro form.
+ */
+.form-default {
+  text-align: right;
+  /**
+	 * Form na login stránce
+	 */ }
+  .form-default--login {
+    width: 25rem;
+    display: flex;
+    flex-direction: column; }
+
+/**
+ * Nastavení text fieldu, který je součástí formu
+ */
+.form-default__text-field {
+  margin-bottom: 0.5rem;
+  /**
+	 * Checkbox
+	 */
+  /**
+	 * Textarea
+	 */ }
+  .form-default__text-field--check {
+    display: flex;
+    align-items: center; }
+    .form-default__text-field--check .form-default__label {
+      padding-left: 2.5rem; }
+  .form-default__text-field--textarea .text-field__input {
+    min-width: 100%;
+    max-width: 100%; }
+
+/* scss/components/_header-global.scss */
+/**
+ * BLOK HEADER-GLOBAL
+ * Hlavní header ve kterém je vlevo logo a vpravo jméno uživatele s odhlašovacím tlačítkem.
+ */
+.header-global {
+  background-color: #00244b;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: white; }
+
+/**
+ * Odkaz v headeru.
+ */
+.header-global__link {
+  display: inline-block; }
+
+/**
+ * Modifikátor odkazu - odhlášení uživatele.
+ */
+.header-global__link--logout {
+  background-image: url(./assets/img/icons/exit--white.svg); }
+
+/**
+ * Modifikátor odkazu - hamburger tlačítko.
+ */
+.header-global__link--hamburger {
+  background-image: url(./assets/img/icons/menu--white.svg); }
+
+/**
+ * Položka seznamu itemů headeru.
+ */
+.header-global__list-item:not(:last-child) {
+  margin-right: 1rem; }
+
+/**
+ * Modifikátor - položka seznamu itemů headeru ve které je hamburger tlačítko.
+ */
+.header-global__list-item--hamburger {
+  display: none; }
+  @media only screen and (max-width: 62.5em) {
+    .header-global__list-item--hamburger {
+      display: inline-block; } }
+
+/**
+ * Nadpis/logo administrace umístěné vlevo v headeru.
+ */
+.header-global__heading {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 1.25rem; }
+
+/**
+ * Wrapper obsahu headeru.
+ */
+.header-global__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+/* scss/components/_item-list-browser.scss */
+/**
+ * BLOK ITEM-LIST-BROWSER
+ * Wrapper pro tabulku s daty.
+ * Umožňuje interagovat s tabulkou a procházet jí - obsahuje vyhledávací panel a page listing.
+ * Může být součástí nějaké jiné komponenty nebo stát sám o sobě.
+ */
+.item-list-browser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  /**
+	 * Modifikátor - pokud stojí sám o sobě a není součástí jiné komponenty.
+	 */ }
+  .item-list-browser--independent {
+    border: 1px solid #d1d1d1;
+    border-radius: 0.25rem;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4); }
+  .item-list-browser--users .item-list-browser__add-item, .item-list-browser--admin-control .item-list-browser__add-item, .item-list-browser--orders .item-list-browser__add-item {
+    display: none; }
+
+/**
+ * Lišta
+ */
+.item-list-browser__bar {
+  height: 3rem;
+  background-color: #f2f2f2;
+  display: flex;
+  /**
+	 * Modifikátor - lišta obsahující page listing.
+	 */ }
+  .item-list-browser__bar--listing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+
+/**
+ * Vyhledávací form.
+ */
+.item-list-browser__search-form {
+  flex: 1; }
+
+/**
+ * Tlačítka pro práci s kategoriemi
+ */
+.item-list-browser__products-controls {
+  justify-content: flex-end; }
+
+.item-list-browser__search-form,
+.item-list-browser__products-controls {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+
+/**
+ * Tlačítko pro přidání produktu
+ */
+.item-list-browser__add-item {
+  height: 100%;
+  background-color: #364b77;
+  transition: background-color 150ms ease;
+  color: white;
+  font-size: 1rem;
+  padding: 0 2.5rem 0 1rem;
+  line-height: 3rem;
+  display: inline-flex;
+  position: relative; }
+  .item-list-browser__add-item:after {
+    content: "";
+    height: 100%;
+    width: 2.5rem;
+    position: absolute;
+    right: 0;
+    background-image: url(./assets/img/icons/add--white.svg);
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .item-list-browser__add-item:hover {
+    background-color: #000024; }
+
+/**
+ * Šipka pro listování tabulkou.
+ */
+.item-list-browser__listing-arrow {
+  width: 3rem;
+  height: 100%;
+  transition: background-color 150ms ease;
+  /**
+	 * Modifikátor - šipka "zpět"
+	 */
+  /**
+	 * Modifikátor - šipka "následující"
+	 */ }
+  .item-list-browser__listing-arrow--back {
+    background-image: url(./assets/img/icons/arrow-back--blue.svg); }
+  .item-list-browser__listing-arrow--forward {
+    background-image: url(./assets/img/icons/arrow-forward--blue.svg); }
+  .item-list-browser__listing-arrow:hover {
+    background-color: #d3d3d3; }
+
+/**
+ * Input vyhledávacího formu
+ */
+.item-list-browser__input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: Roboto;
+  /**
+	 * Modifikátor - select input
+	 */
+  /**
+	 * Modifikátor - text input
+	 */
+  /**
+	 * Modifikátor - submit input
+	 */ }
+  .item-list-browser__input:not(:last-child) {
+    border-right: 1px solid #d1d1d1; }
+  .item-list-browser__input--select {
+    flex: 10%; }
+  .item-list-browser__input--search {
+    flex: 90%;
+    padding: 0 0.5rem;
+    transition: background-color 150ms ease; }
+    .item-list-browser__input--search:focus {
+      background-color: #d3d3d3; }
+  .item-list-browser__input--submit {
+    background-image: url(./assets/img/icons/search--blue.svg);
+    width: 3rem;
+    transition: background-color 150ms ease; }
+    .item-list-browser__input--submit:hover {
+      cursor: pointer;
+      background-color: #d3d3d3; }
+
+/**
+ * Wrapper pro tabulku s daty
+ */
+.item-list-browser__items {
+  height: calc(100% - 6rem);
+  border-top: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+  overflow-y: scroll; }
+
+/* scss/components/_nav-global.scss */
+/**
+ * PROMĚNNÉ
+ */
+/**
+ * Blok reprezentující hlavní navigaci
+ * Skládá se z elementů, které přímo odkazují na podstránky a z dalšího bloku dropdown
+ */
+.nav-global {
+  /**
+	 * Vnoření elementů bloku dropdown do bloku nav-global, kvůli odlišení od ostatních dropdownů
+	 */ }
+  .nav-global .dropdown__anchor:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+    width: 2rem;
+    transition: -webkit-transform 150ms ease;
+    transition: transform 150ms ease;
+    transition: transform 150ms ease, -webkit-transform 150ms ease; }
+  .nav-global .dropdown--open .dropdown__anchor:after {
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg); }
+  .nav-global .dropdown__anchor.nav-global__link--active:after {
+    background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg); }
+
+.nav-global__link {
+  display: block;
+  transition: background-color 150ms ease;
+  position: relative;
+  padding: 1rem 0 1rem 3.5rem;
+  /**
+	 * Ikony pro jednotlivé položky navigace
+	 */ }
+  .nav-global__link:hover {
+    background-color: #d3d3d3; }
+  .nav-global__link--separate:before {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    bottom: 0;
+    left: 1rem;
+    width: 1.5rem; }
+  .nav-global__link--inside-dropdown {
+    padding-left: 1.75rem; }
+  .nav-global__link--active {
+    background-color: #364b77;
+    color: white; }
+    .nav-global__link--active:hover {
+      background-color: #364b77; }
+  .nav-global__link--home:before {
+    background-image: url(./assets/img/icons/home--blue.svg); }
+  .nav-global__link--home.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/home--white.svg); }
+  .nav-global__link--content:before {
+    background-image: url(./assets/img/icons/note--blue.svg); }
+  .nav-global__link--content.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/note--white.svg); }
+  .nav-global__link--catalog:before {
+    background-image: url(./assets/img/icons/view-list--blue.svg); }
+  .nav-global__link--catalog.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/view-list--white.svg); }
+  .nav-global__link--orders:before {
+    background-image: url(./assets/img/icons/receipt--blue.svg); }
+  .nav-global__link--orders.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/receipt--white.svg); }
+  .nav-global__link--customers:before {
+    background-image: url(./assets/img/icons/people--blue.svg); }
+  .nav-global__link--customers.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/people--white.svg); }
+  .nav-global__link--user-accounts:before {
+    background-image: url(./assets/img/icons/person-box--blue.svg); }
+  .nav-global__link--user-accounts.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/person-box--white.svg); }
+  .nav-global__link--dev-tools:before {
+    background-image: url(./assets/img/icons/god-mode--blue.svg); }
+  .nav-global__link--dev-tools.nav-global__link--active:before {
+    background-image: url(./assets/img/icons/god-mode--white.svg); }
+
+/* scss/components/_side-drawer.scss */
+/**
+ * BLOK SIDE-DRAWER
+ * Boční panel obsahující hlavní navigaci administrace.
+ */
+.side-drawer {
+  width: 16rem;
+  border-right: 1px solid #e8e8e8;
+  display: inline-block;
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+  transition: left 150ms ease;
+  /**
+	 * Modifikátor - tato třída je řízena javascriptem při otevírání a zavírání menu na telefonu.
+	 */ }
+  @media only screen and (max-width: 62.5em) {
+    .side-drawer {
+      position: absolute;
+      left: calc(-16rem + -1px);
+      z-index: 2;
+      top: 3.5rem;
+      background-color: white;
+      box-shadow: none; } }
+  @media only screen and (max-width: 62.5em) {
+    .side-drawer--visible {
+      left: 0;
+      box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12); } }
+
+/* scss/components/_tab-bar.scss */
+/**
+ * BLOK TAB-BAR
+ */
+.tab-bar {
+  display: flex;
+  background-color: #00244b; }
+
+/**
+ * Položka bloku tab-bar
+ */
+.tab-bar__item {
+  flex: 1; }
+
+/**
+ * Link v položce bloku tab-bar
+ */
+.tab-bar__link {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding: 0.625rem 0;
+  position: relative;
+  color: white;
+  /** Stav - hover na link */ }
+  .tab-bar__link:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+/**
+ * Aktuálně aktivní vybraná položka bloku tab-bar
+ */
+.tab-bar__link--selected {
+  background-color: rgba(255, 255, 255, 0.3); }
+  .tab-bar__link--selected:after {
+    content: "";
+    height: 0.1875rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+/* scss/components/_table-items.scss */
+/**
+ * BLOK TABLE-ITEMS
+ * Tabulka pro zobrazování dat.
+ */
+.table-items {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  table-layout: fixed;
+  position: relative; }
+  .table-items th {
+    font-family: Roboto; }
+  .table-items th:not(.table-items__icon-cell),
+  .table-items td:not(.table-items__icon-cell) {
+    padding: 0.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 1px; }
+
+/**
+ * Header tabulky
+ */
+.table-items__header {
+  border-bottom: 1px solid #bababa;
+  background-color: #f3f3f3; }
+  .table-items__header .table-items__edit,
+  .table-items__header .table-items__delete {
+    opacity: 0.5; }
+    .table-items__header .table-items__edit:hover,
+    .table-items__header .table-items__delete:hover {
+      background-color: transparent;
+      cursor: not-allowed; }
+
+/**
+ * Body tabulky.
+ * Slouží jako wrapper pro jednotlivé položky a také jako JS hook.
+ */
+.table-items__list {
+  /**
+	 * Indikace prázdné tabulky
+	 */ }
+  .table-items__list--empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2.75rem;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .table-items__list--empty:after {
+      content: "Tabulka neobsahuje žádná data!";
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 2.125rem; }
+
+/**
+ * Řádek tabulky
+ */
+.table-items__item {
+  height: 2.5rem; }
+  .table-items__item:not(:last-child) {
+    border-bottom: 1px solid #e8e8e8; }
+  .table-items__item--all-empty {
+    display: none;
+    text-align: center;
+    font-size: 2.125rem;
+    font-family: Roboto; }
+  .table-items__item--header {
+    height: 2.5rem; }
+  .table-items__item--empty {
+    visibility: hidden; }
+    .table-items__item--empty:not(:last-child) {
+      border-bottom: none; }
+
+/**
+ * Buňka tabulky obsahující ikony
+ */
+@media only screen and (max-width: 75em) {
+  .table-items__icon-cell {
+    width: 20rem; } }
+
+/**
+ * Wrapper pro ikony uvnitř buňky
+ */
+.table-items__icon-wrapper--controls {
+  display: flex;
+  justify-content: flex-end;
+  height: 2.2rem; }
+
+@media only screen and (max-width: 75em) {
+  .table-items__icon-wrapper,
+  .table-items__checkbox {
+    display: none; } }
+
+/**
+ * Ikona v tabulce
+ */
+.table-items__icon {
+  width: 2.2rem;
+  height: 100%;
+  border-radius: 1.1rem;
+  background-size: 1.6rem;
+  transition: background-color 150ms ease; }
+  .table-items__icon:hover {
+    cursor: pointer;
+    background-color: #d3d3d3; }
+
+/**
+ * Ikona pro úpravu položky tabulky
+ */
+.table-items__edit {
+  background-image: url(./assets/img/icons/edit--blue.svg); }
+
+/**
+ * Ikona pro smazání položky tabulky
+ */
+.table-items__delete {
+  background-image: url(./assets/img/icons/delete--blue.svg); }
+
+/**
+ * Checkbox položky tabulky
+ */
+.table-items__checkbox {
+  width: 1rem;
+  height: 1rem; }
+  .table-items__checkbox .mdc-checkbox__background {
+    top: 0.6875rem;
+    left: 0.625rem; }
+
+/* scss/components/_text-field.scss */
+/**
+ * PROMĚNNÉ
+ */
+/**
+ * Komponenta text-field
+ */
+.text-field {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  /**
+	 * Podtrhávací čára
+	 */
+  /**
+	 * Focus - stav řízený javascriptem
+	 */
+  /**
+	 * Text field, který má title posunutý nad input
+	 */ }
+  .text-field:after {
+    content: "";
+    position: absolute;
+    background-color: #220016;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 0.125rem;
+    transition: width 150ms ease; }
+  .text-field--active {
+    /**
+		 * Posunutí labelu nahoru tak, aby byl viditelný zadávaný text
+		 */
+    /**
+		 * Podtržení inputu - pouze pro vizuální efekt
+		 */
+    /**
+		 * Změna pozadí input elementu
+		 */ }
+    .text-field--active .text-field__label {
+      top: 0.3888888889rem;
+      font-size: 0.75rem;
+      color: #220016; }
+    .text-field--active:after {
+      width: 100%; }
+    .text-field--active .text-field__input {
+      background-color: #d3d3d3; }
+  .text-field--separated {
+    display: flex;
+    flex-direction: column-reverse; }
+    .text-field--separated .text-field__label {
+      position: static;
+      text-align: left;
+      color: black;
+      font-size: 1rem;
+      margin-bottom: 0.3125rem; }
+
+/**
+ * Input/select/textarea element
+ */
+.text-field__input {
+  padding: 1.1666666667rem 1.1666666667rem 0.3888888889rem 0.5833333333rem;
+  border: none;
+  outline: none;
+  background-color: #f3f3f3;
+  font-size: 1rem;
+  font-family: Roboto;
+  border-bottom: 0.125rem solid #d3d3d3;
+  height: 3.5rem;
+  width: 100%;
+  /**
+	 * Speciální properties pro textarea element
+	 */
+  /**
+	 * Stav - hover
+	 */ }
+  .text-field__input--textarea {
+    min-width: 12rem;
+    min-height: 8rem;
+    max-width: 24rem;
+    max-height: 24rem;
+    padding-top: 1.4rem; }
+  .text-field__input:hover {
+    background-color: #d3d3d3; }
+
+/**
+ * Label patřící k inputu
+ */
+.text-field__label {
+  left: 0.5833333333rem;
+  pointer-events: none;
+  top: 1.4166666667rem;
+  transition: top 150ms ease, font-size 150ms ease;
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute; }
+/*# sourceMappingURL=main.css.map */

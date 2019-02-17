@@ -1,1 +1,31 @@
 /* scss/components/_side-drawer.scss */
+/**
+ * BLOK SIDE-DRAWER
+ * Boční panel obsahující hlavní navigaci administrace.
+ */
+.side-drawer {
+    width: $sideDrawerWidth;
+    border-right: $borderGreyLight;
+    display: inline-block;
+    box-shadow: $boxShadowElevated16;
+    transition: left $transitionEase;
+
+    @media only screen and(max-width: 62.5em) {
+        position: absolute;
+        left: calc(#{-$sideDrawerWidth} + #{-$borderWidth});
+        z-index: 2;
+        top: $headerHeight;
+        background-color: white;
+        box-shadow: none;
+    }
+
+    /**
+	 * Modifikátor - tato třída je řízena javascriptem při otevírání a zavírání menu na telefonu.
+	 */
+    &--visible {
+        @media only screen and(max-width: 62.5em) {
+            left: 0;
+            box-shadow: $boxShadowElevated16;
+        }
+    }
+}

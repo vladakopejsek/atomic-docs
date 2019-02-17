@@ -1,1 +1,46 @@
 /* scss/components/_form-default.scss */
+/**
+ * BLOK FORM-DEFAULT
+ * Základní nastavení pro form.
+ */
+.form-default {
+    text-align: right;
+
+    /**
+	 * Form na login stránce
+	 */
+    &--login {
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/**
+ * Nastavení text fieldu, který je součástí formu
+ */
+.form-default__text-field {
+    margin-bottom: 0.5rem;
+
+    /**
+	 * Checkbox
+	 */
+    &--check {
+        display: flex;
+        align-items: center;
+
+        .form-default__label {
+            padding-left: 2.5rem;
+        }
+    }
+
+    /**
+	 * Textarea
+	 */
+    &--textarea {
+        .text-field__input {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+}

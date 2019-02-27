@@ -1,6 +1,8 @@
 @import "./lib/functions";
 @import "./lib/variables";
 
+@import "./_body";
+@import "./_typo";
 @import "./_layout";
 @import "./_utility";
 @import "components/_components";

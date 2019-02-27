@@ -26,7 +26,7 @@ $linkPaddingLeft: $linkIconLeft * 2 + $linkIconWidth;
             background-size: 0.5rem;
             background-repeat: no-repeat;
             background-position: center center;
-            background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+            background-image: url(../assets/icons/arrow-right-keyboard--blue.svg);
             width: 2rem;
             transition: transform $transitionEase;
         }
@@ -46,7 +46,7 @@ $linkPaddingLeft: $linkIconLeft * 2 + $linkIconWidth;
     .dropdown__anchor.nav-global__link--active {
         // Bílá šipka kvůli změně pozadí aktivní položky
         &:after {
-            background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg);
+            background-image: url(../assets/icons/arrow-right-keyboard--white.svg);
         }
     }
 }
@@ -109,13 +109,13 @@ $linkPaddingLeft: $linkIconLeft * 2 + $linkIconWidth;
     @each $className, $icon in $icons {
         &--#{$className} {
             &:before {
-                background-image: url(./assets/img/icons/#{$icon}--blue.svg);
+                background-image: url(../assets/icons/#{$icon}--blue.svg);
             }
         }
 
         &--#{$className}.nav-global__link--active {
             &:before {
-                background-image: url(./assets/img/icons/#{$icon}--white.svg);
+                background-image: url(../assets/icons/#{$icon}--white.svg);
             }
         }
     }

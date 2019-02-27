@@ -7,6 +7,10 @@ $rightSide: calc(100% - #{$leftSide});
  * Karta obsahuje category tree a tabulku s produkty
  */
 
+.card-catalog {
+    height: 40rem;
+}
+
 /** Header karty */
 .card-catalog__header {
     justify-content: flex-start;

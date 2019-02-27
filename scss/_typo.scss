@@ -1,0 +1,79 @@
+/**
+ * TYPOGRAFIE
+ */
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Bold.woff2) format("woff2"),
+        url(../assets/fonts/Roboto-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Medium.woff2) format("woff2"),
+        url(../assets/fonts/Roboto-Medium.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Regular.woff2) format("woff2"),
+        url(../assets/fonts/Roboto-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Light.woff2) format("woff2"),
+        url(../assets/fonts/Roboto-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+}
+
+body,
+h3,
+h4,
+h5 {
+    font-family: Roboto;
+}
+
+h1 {
+    font-size: $fontSizeH1;
+}
+
+h2 {
+    font-size: $fontSizeH2;
+}
+
+h3 {
+    font-size: $fontSizeH3;
+}
+
+h4 {
+    font-size: $fontSizeH4;
+}
+
+h5 {
+    font-size: $fontSizeH5;
+}
+
+h6 {
+    font-weight: 600;
+    font-size: $fontSizeH6;
+}
+
+body {
+    font-size: $fontSizeBase;
+
+    @media only screen and(max-width: 32.5em) {
+        font-size: $fontSizeSmall;
+    }
+}

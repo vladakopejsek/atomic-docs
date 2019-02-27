@@ -50,7 +50,7 @@
     {
         "component": "card",
         "category": "components",
-        "description": "Tato komponenta je v projektu pou\u017eit\u00e1 sp\u00ed\u0161e abstraktn\u011b, proto\u017ee je zat\u00edm v\u017edy v kombinaci s jednou z ostatn\u00edch &quot;card&quot; komponent. Definuje tedy n\u011bjak\u00e9 z\u00e1kladn\u00ed stylov\u00e1n\u00ed t\u011bchto karet.",
+        "description": "Tato komponenta je v projektu pou\u017eit\u00e1 sp\u00ed\u0161e abstraktn\u011b, proto\u017ee je zat\u00edm v\u017edy v kombinaci s jednou z ostatn\u00edch \"card\" komponent. Definuje tedy n\u011bjak\u00e9 z\u00e1kladn\u00ed stylov\u00e1n\u00ed t\u011bchto karet, co\u017e je slo\u017eeno z headeru karty, t\u011bla karty a refresh tla\u010d\u00edtka. ",
         "backgroundColor": "",
         "order": -5,
         "has_js": "true"
@@ -134,5 +134,13 @@
         "backgroundColor": "",
         "order": -15,
         "has_js": "true"
+    },
+    {
+        "component": "link",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -16,
+        "has_js": "false"
     }
 ]

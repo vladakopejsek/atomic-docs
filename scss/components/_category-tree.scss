@@ -7,11 +7,14 @@ $iconWrapperWidth: 3 * $iconHeight;
  * CATEGORY TREE BLOK
  */
 .category-tree {
+    /* 
+    ZAKOMENTOVÁNO KVŮLI ATOMIC-DOCS
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 0; */
+    width: 30rem;
     overflow-y: scroll;
 
     // Pozadí otevřeného dropdownu obarvené kvůli lepší přehlednosti
@@ -21,8 +24,9 @@ $iconWrapperWidth: 3 * $iconHeight;
 }
 
 .category-tree {
+
     // Stav - při otevřeném dropdownu je potřeba otočit šipku dolů a naopak
-    .dropdown--open > .category-tree__branch-title .category-tree__open-branch {
+    .dropdown--open>.category-tree__branch-title .category-tree__open-branch {
         transform: rotateZ(90deg);
     }
 }
@@ -53,7 +57,7 @@ $iconWrapperWidth: 3 * $iconHeight;
         background-color: $blue;
 
         .category-tree__open-branch {
-            background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg);
+            background-image: url(../assets/icons/arrow-right-keyboard--white.svg);
         }
     }
 }
@@ -61,7 +65,7 @@ $iconWrapperWidth: 3 * $iconHeight;
 // Šipka pro otevírání
 .category-tree__open-branch {
     transition: background-image $transitionEase, transform $transitionEase;
-    background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+    background-image: url(../assets/icons/arrow-right-keyboard--blue.svg);
     display: block;
     width: 100%;
     height: $categoryHeight;
@@ -137,17 +141,17 @@ $iconWrapperWidth: 3 * $iconHeight;
 
 // Ikona pro přidání kategorie
 .category-tree__control-icon--add {
-    background-image: url(./assets/img/icons/add--blue.svg);
+    background-image: url(../assets/icons/add--blue.svg);
 }
 
 // Ikona pro editaci kategorie
 .category-tree__control-icon--edit {
-    background-image: url(./assets/img/icons/edit--blue.svg);
+    background-image: url(../assets/icons/edit--blue.svg);
 }
 
 // Ikona pro smazání kategorie
 .category-tree__control-icon--delete {
-    background-image: url(./assets/img/icons/delete--blue.svg);
+    background-image: url(../assets/icons/delete--blue.svg);
 }
 
 // Pro vizuální odsazení zanořených kategorií

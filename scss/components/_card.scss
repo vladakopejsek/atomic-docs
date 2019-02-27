@@ -13,23 +13,27 @@ $cardBodyPadding: 0.5rem;
     transition: border-color $transitionEase;
     display: flex;
     flex-direction: column;
+
+    // Pouze pro Atomic-Docs
+    min-height: 10rem;
+    width: 80rem;
 }
 
 /**
  * Řešení barev karet.
  * Smyčka prochází předem definované pole barev a podle toho tvoří modifikátory třídy.
  */
-$colors: (
-    "blue": $blue,
-    "purple": $purpleDark,
-    "red": $red,
-    "pink": $pink,
-    "indigo": $indigo,
-    "teal": $teal,
-    "lime": $lime,
-    "yellow": $yellow
-);
-@each $colorName, $color in $colors {
+$colors: ("blue": $blue,
+"purple": $purpleDark,
+"red": $red,
+"pink": $pink,
+"indigo": $indigo,
+"teal": $teal,
+"lime": $lime,
+"yellow": $yellow);
+
+@each $colorName,
+$color in $colors {
     .card--#{$colorName} {
         border-color: rgba($color, $lightOpacity);
 
@@ -114,7 +118,7 @@ $colors: (
  * Refresh tlačítko umístěné v headeru karty.
  */
 .card__refresh-button {
-    background-image: url(./assets/img/icons/refresh--white.svg);
+    background-image: url(../assets/icons/refresh--white.svg);
 
     &:hover {
         background-color: rgba(black, $lightOpacity / 2);

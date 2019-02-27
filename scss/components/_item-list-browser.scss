@@ -93,7 +93,7 @@ $barHeight: 3rem;
         width: $iconWidth;
         position: absolute;
         right: 0;
-        background-image: url(./assets/img/icons/add--white.svg);
+        background-image: url(../assets/icons/add--white.svg);
         background-repeat: no-repeat;
         background-position: center center;
     }
@@ -115,14 +115,14 @@ $barHeight: 3rem;
 	 * Modifikátor - šipka "zpět"
 	 */
     &--back {
-        background-image: url(./assets/img/icons/arrow-back--blue.svg);
+        background-image: url(../assets/icons/arrow-back--blue.svg);
     }
 
     /**
 	 * Modifikátor - šipka "následující"
 	 */
     &--forward {
-        background-image: url(./assets/img/icons/arrow-forward--blue.svg);
+        background-image: url(../assets/icons/arrow-forward--blue.svg);
     }
 
     &:hover {
@@ -167,7 +167,7 @@ $barHeight: 3rem;
 	 * Modifikátor - submit input
 	 */
     &--submit {
-        background-image: url(./assets/img/icons/search--blue.svg);
+        background-image: url(../assets/icons/search--blue.svg);
         width: $barHeight;
         transition: background-color $transitionEase;
 

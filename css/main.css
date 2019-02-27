@@ -32,6 +32,103 @@
 /**
  * STÍNY
  */
+/**
+ * ZÁKLADNÍ NASTAVENÍ ELEMENTŮ
+ */
+body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 85%; }
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+p,
+h3,
+h2 {
+  margin: 0.5rem 0; }
+
+h1 {
+  margin: 0; }
+
+table {
+  border-collapse: collapse; }
+
+th,
+td {
+  padding: 0; }
+
+input,
+textarea {
+  box-sizing: border-box; }
+
+/**
+ * TYPOGRAFIE
+ */
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Bold.woff2) format("woff2"), url(../assets/fonts/Roboto-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Medium.woff2) format("woff2"), url(../assets/fonts/Roboto-Medium.woff) format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Regular.woff2) format("woff2"), url(../assets/fonts/Roboto-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Light.woff2) format("woff2"), url(../assets/fonts/Roboto-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+h1,
+h2 {
+  font-weight: 300; }
+
+body,
+h3,
+h4,
+h5 {
+  font-family: Roboto; }
+
+h1 {
+  font-size: 6rem; }
+
+h2 {
+  font-size: 3.75rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h4 {
+  font-size: 2.125rem; }
+
+h5 {
+  font-size: 1.5rem; }
+
+h6 {
+  font-weight: 600;
+  font-size: 1.25rem; }
+
+body {
+  font-size: 1rem; }
+  @media only screen and (max-width: 32.5em) {
+    body {
+      font-size: 0.875rem; } }
+
 .main {
   height: calc(100vh - 3.5rem);
   display: flex;
@@ -324,7 +421,9 @@
   overflow: hidden;
   transition: border-color 150ms ease;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  min-height: 10rem;
+  width: 80rem; }
 
 /**
  * Řešení barev karet.
@@ -532,7 +631,7 @@
  * Refresh tlačítko umístěné v headeru karty.
  */
 .card__refresh-button {
-  background-image: url(./assets/img/icons/refresh--white.svg); }
+  background-image: url(../assets/icons/refresh--white.svg); }
   .card__refresh-button:hover {
     background-color: rgba(0, 0, 0, 0.15); }
 
@@ -542,6 +641,9 @@
  * Používá se v kombinaci s blokem .card a je hlavní částí view katalogu.
  * Karta obsahuje category tree a tabulku s produkty
  */
+.card-catalog {
+  height: 40rem; }
+
 /** Header karty */
 .card-catalog__header {
   justify-content: flex-start; }
@@ -638,7 +740,7 @@
  * Nadpis karty - v tomto případě pouze k nastavení pozadí
  */
 .card-chart__title {
-  background-image: url(./assets/img/icons/dollar--white.svg); }
+  background-image: url(../assets/icons/dollar--white.svg); }
 
 /* scss/components/_card-orders.scss */
 /**
@@ -659,7 +761,7 @@
  * Nadpis karty - v tomto případě se zde pouze nastavuje ikona
  */
 .card-orders__title {
-  background-image: url(./assets/img/icons/receipt--white.svg); }
+  background-image: url(../assets/icons/receipt--white.svg); }
 
 /* scss/components/_card-simple.scss */
 /**
@@ -706,7 +808,7 @@
  * Stručně a přehledně zobrazuje hlavní statistiky e-shopu.
  */
 .card-stats__title {
-  background-image: url(./assets/img/icons/data--white.svg); }
+  background-image: url(../assets/icons/data--white.svg); }
 
 /**
  * Tělo karty
@@ -737,13 +839,13 @@
     width: 3.5rem;
     height: 3.5rem; }
   .card-stats__item:nth-child(1):before {
-    background-image: url(./assets/img/icons/receipt--purple.svg); }
+    background-image: url(../assets/icons/receipt--purple.svg); }
   .card-stats__item:nth-child(2):before {
-    background-image: url(./assets/img/icons/dollar--purple.svg); }
+    background-image: url(../assets/icons/dollar--purple.svg); }
   .card-stats__item:nth-child(3):before {
-    background-image: url(./assets/img/icons/people--purple.svg); }
+    background-image: url(../assets/icons/people--purple.svg); }
   .card-stats__item:nth-child(4):before {
-    background-image: url(./assets/img/icons/trending-up--purple.svg); }
+    background-image: url(../assets/icons/trending-up--purple.svg); }
 
 /**
  * Popisek karty.
@@ -757,11 +859,14 @@
  * CATEGORY TREE BLOK
  */
 .category-tree {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  /* 
+    ZAKOMENTOVÁNO KVŮLI ATOMIC-DOCS
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; */
+  width: 30rem;
   overflow-y: scroll; }
   .category-tree .dropdown__content {
     background-color: rgba(0, 0, 0, 0.1); }
@@ -789,13 +894,13 @@
   .category-tree__open-branch-wrapper:hover {
     background-color: #00244b; }
     .category-tree__open-branch-wrapper:hover .category-tree__open-branch {
-      background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg); }
+      background-image: url(../assets/icons/arrow-right-keyboard--white.svg); }
 
 .category-tree__open-branch {
   transition: background-image 150ms ease, -webkit-transform 150ms ease;
   transition: background-image 150ms ease, transform 150ms ease;
   transition: background-image 150ms ease, transform 150ms ease, -webkit-transform 150ms ease;
-  background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+  background-image: url(../assets/icons/arrow-right-keyboard--blue.svg);
   display: block;
   width: 100%;
   height: 3rem; }
@@ -851,13 +956,13 @@
     background-color: #d3d3d3; }
 
 .category-tree__control-icon--add {
-  background-image: url(./assets/img/icons/add--blue.svg); }
+  background-image: url(../assets/icons/add--blue.svg); }
 
 .category-tree__control-icon--edit {
-  background-image: url(./assets/img/icons/edit--blue.svg); }
+  background-image: url(../assets/icons/edit--blue.svg); }
 
 .category-tree__control-icon--delete {
-  background-image: url(./assets/img/icons/delete--blue.svg); }
+  background-image: url(../assets/icons/delete--blue.svg); }
 
 .category-tree__branch--nested {
   margin-left: 1.5rem;
@@ -881,6 +986,7 @@
  */
 .form-default {
   text-align: right;
+  width: 80rem;
   /**
 	 * Form na login stránce
 	 */ }
@@ -933,13 +1039,13 @@
  * Modifikátor odkazu - odhlášení uživatele.
  */
 .header-global__link--logout {
-  background-image: url(./assets/img/icons/exit--white.svg); }
+  background-image: url(../assets/icons/exit--white.svg); }
 
 /**
  * Modifikátor odkazu - hamburger tlačítko.
  */
 .header-global__link--hamburger {
-  background-image: url(./assets/img/icons/menu--white.svg); }
+  background-image: url(../assets/icons/menu--white.svg); }
 
 /**
  * Položka seznamu itemů headeru.
@@ -1048,7 +1154,7 @@
     width: 2.5rem;
     position: absolute;
     right: 0;
-    background-image: url(./assets/img/icons/add--white.svg);
+    background-image: url(../assets/icons/add--white.svg);
     background-repeat: no-repeat;
     background-position: center center; }
   .item-list-browser__add-item:hover {
@@ -1068,9 +1174,9 @@
 	 * Modifikátor - šipka "následující"
 	 */ }
   .item-list-browser__listing-arrow--back {
-    background-image: url(./assets/img/icons/arrow-back--blue.svg); }
+    background-image: url(../assets/icons/arrow-back--blue.svg); }
   .item-list-browser__listing-arrow--forward {
-    background-image: url(./assets/img/icons/arrow-forward--blue.svg); }
+    background-image: url(../assets/icons/arrow-forward--blue.svg); }
   .item-list-browser__listing-arrow:hover {
     background-color: #d3d3d3; }
 
@@ -1102,7 +1208,7 @@
     .item-list-browser__input--search:focus {
       background-color: #d3d3d3; }
   .item-list-browser__input--submit {
-    background-image: url(./assets/img/icons/search--blue.svg);
+    background-image: url(../assets/icons/search--blue.svg);
     width: 3rem;
     transition: background-color 150ms ease; }
     .item-list-browser__input--submit:hover {
@@ -1139,7 +1245,7 @@
     background-size: 0.5rem;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(./assets/img/icons/arrow-right-keyboard--blue.svg);
+    background-image: url(../assets/icons/arrow-right-keyboard--blue.svg);
     width: 2rem;
     transition: -webkit-transform 150ms ease;
     transition: transform 150ms ease;
@@ -1148,7 +1254,7 @@
     -webkit-transform: rotateZ(90deg);
             transform: rotateZ(90deg); }
   .nav-global .dropdown__anchor.nav-global__link--active:after {
-    background-image: url(./assets/img/icons/arrow-right-keyboard--white.svg); }
+    background-image: url(../assets/icons/arrow-right-keyboard--white.svg); }
 
 .nav-global__link {
   display: block;
@@ -1178,33 +1284,33 @@
     .nav-global__link--active:hover {
       background-color: #364b77; }
   .nav-global__link--home:before {
-    background-image: url(./assets/img/icons/home--blue.svg); }
+    background-image: url(../assets/icons/home--blue.svg); }
   .nav-global__link--home.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/home--white.svg); }
+    background-image: url(../assets/icons/home--white.svg); }
   .nav-global__link--content:before {
-    background-image: url(./assets/img/icons/note--blue.svg); }
+    background-image: url(../assets/icons/note--blue.svg); }
   .nav-global__link--content.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/note--white.svg); }
+    background-image: url(../assets/icons/note--white.svg); }
   .nav-global__link--catalog:before {
-    background-image: url(./assets/img/icons/view-list--blue.svg); }
+    background-image: url(../assets/icons/view-list--blue.svg); }
   .nav-global__link--catalog.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/view-list--white.svg); }
+    background-image: url(../assets/icons/view-list--white.svg); }
   .nav-global__link--orders:before {
-    background-image: url(./assets/img/icons/receipt--blue.svg); }
+    background-image: url(../assets/icons/receipt--blue.svg); }
   .nav-global__link--orders.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/receipt--white.svg); }
+    background-image: url(../assets/icons/receipt--white.svg); }
   .nav-global__link--customers:before {
-    background-image: url(./assets/img/icons/people--blue.svg); }
+    background-image: url(../assets/icons/people--blue.svg); }
   .nav-global__link--customers.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/people--white.svg); }
+    background-image: url(../assets/icons/people--white.svg); }
   .nav-global__link--user-accounts:before {
-    background-image: url(./assets/img/icons/person-box--blue.svg); }
+    background-image: url(../assets/icons/person-box--blue.svg); }
   .nav-global__link--user-accounts.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/person-box--white.svg); }
+    background-image: url(../assets/icons/person-box--white.svg); }
   .nav-global__link--dev-tools:before {
-    background-image: url(./assets/img/icons/god-mode--blue.svg); }
+    background-image: url(../assets/icons/god-mode--blue.svg); }
   .nav-global__link--dev-tools.nav-global__link--active:before {
-    background-image: url(./assets/img/icons/god-mode--white.svg); }
+    background-image: url(../assets/icons/god-mode--white.svg); }
 
 /* scss/components/_side-drawer.scss */
 /**
@@ -1390,13 +1496,13 @@
  * Ikona pro úpravu položky tabulky
  */
 .table-items__edit {
-  background-image: url(./assets/img/icons/edit--blue.svg); }
+  background-image: url(../assets/icons/edit--blue.svg); }
 
 /**
  * Ikona pro smazání položky tabulky
  */
 .table-items__delete {
-  background-image: url(./assets/img/icons/delete--blue.svg); }
+  background-image: url(../assets/icons/delete--blue.svg); }
 
 /**
  * Checkbox položky tabulky
@@ -1504,4 +1610,22 @@
   transition: top 150ms ease, font-size 150ms ease;
   color: rgba(0, 0, 0, 0.7);
   position: absolute; }
+
+/* scss/components/_link.scss */
+/**
+ * BLOK LINK
+ */
+.link {
+  text-decoration: none;
+  /**
+	 * Modifikátor - link v podobě ikony
+	 */ }
+  .link--icon {
+    border-radius: 2rem;
+    padding: 1.25rem;
+    transition: background-color 150ms ease;
+    background-size: 1.5rem;
+    font-size: 0; }
+    .link--icon:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
 /*# sourceMappingURL=main.css.map */

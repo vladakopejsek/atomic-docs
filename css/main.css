@@ -1624,6 +1624,9 @@ body {
 /**
  * BLOK DROPDOWN
  */
+.dropdown {
+  max-width: 30rem; }
+
 .dropdown__anchor {
   position: relative;
   overflow: hidden; }

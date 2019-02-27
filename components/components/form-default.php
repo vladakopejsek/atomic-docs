@@ -1,5 +1,5 @@
 <!-- components/components/form-default.php -->
-<form action="/skycms/admin/katalog/17/pridat-produkt" method="post" class="form-default">
+<form action="" method="post" class="form-default">
     <div class="text-field text-field--separated form-default__text-field">
         <input type="text" name="url" id="url" class="text-field__input">
         <label class="text-field__label" for="url">URL</label>

@@ -49,6 +49,10 @@ $linkPaddingLeft: $linkIconLeft * 2 + $linkIconWidth;
             background-image: url(../assets/icons/arrow-right-keyboard--white.svg);
         }
     }
+
+    &--independent {
+        width: 30rem;
+    }
 }
 
 // Obecný element bloku nav-global
@@ -57,6 +61,7 @@ $linkPaddingLeft: $linkIconLeft * 2 + $linkIconWidth;
     transition: background-color $transitionEase;
     position: relative;
     padding: 1rem 0 1rem $linkPaddingLeft;
+    color: black;
 
     &:hover {
         background-color: $greyDark;

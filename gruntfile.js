@@ -8,7 +8,8 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 implementation: sass,
-                sourceMap: true
+                sourceMap: true,
+                includePaths: ["node_modules"]
             },
             dist: {
                 files: {

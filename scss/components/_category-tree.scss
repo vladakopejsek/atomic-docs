@@ -7,15 +7,18 @@ $iconWrapperWidth: 3 * $iconHeight;
  * CATEGORY TREE BLOK
  */
 .category-tree {
-    /* 
-    ZAKOMENTOVÁNO KVŮLI ATOMIC-DOCS
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0; */
-    width: 30rem;
-    overflow-y: scroll;
+    bottom: 0;
+
+    // POUZE PRO ATOMIC DOCS
+    &--independent {
+        position: static;
+        width: 30rem;
+        overflow-y: scroll;
+    }
 
     // Pozadí otevřeného dropdownu obarvené kvůli lepší přehlednosti
     .dropdown__content {
@@ -24,7 +27,6 @@ $iconWrapperWidth: 3 * $iconHeight;
 }
 
 .category-tree {
-
     // Stav - při otevřeném dropdownu je potřeba otočit šipku dolů a naopak
     .dropdown--open>.category-tree__branch-title .category-tree__open-branch {
         transform: rotateZ(90deg);

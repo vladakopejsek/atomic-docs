@@ -7,13 +7,16 @@
         "start": "grunt default"
     },
     "author": "SKY Media - Vladimír Kopejska",
-    "dependencies": {},
+    "dependencies": {
+        "@material/checkbox": "^0.44.1",
+        "@material/form-field": "^0.44.1"
+    },
     "devDependencies": {
         "grunt-contrib-cssmin": "^3.0.0",
         "grunt-contrib-watch": "^1.1.0",
         "grunt-sass": "^3.0.2",
         "node-sass": "^4.11.0",
-        "autoprefixer": "^9.4.7",
+        "autoprefixer": "^9.4.9",
         "grunt": "^1.0.3",
         "grunt-postcss": "^0.9.0",
         "jit-grunt": "^0.10.0"

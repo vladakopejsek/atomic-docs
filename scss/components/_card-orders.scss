@@ -10,11 +10,6 @@
   */
 .card-orders__body {
     padding: 0;
-
-    & > table {
-        width: calc(100% + #{$cardBodyPadding * 2});
-        height: calc(100% + #{$cardBodyPadding});
-    }
 }
 
 /**

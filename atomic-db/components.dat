@@ -26,7 +26,7 @@
     {
         "component": "card-orders",
         "category": "components",
-        "description": "Karta ur\u010den\u00e1 pro pou\u017eit\u00ed na dashboardu. Obsahuje tabulku s nejaktu\u00e1ln\u011bj\u0161\u00edmi objedn\u00e1vkami.",
+        "description": "Karta ur\u010den\u00e1 pro pou\u017eit\u00ed na dashboardu. Obsahuje tabulku s deseti nejaktu\u00e1ln\u011bj\u0161\u00edmi objedn\u00e1vkami.",
         "backgroundColor": "",
         "order": -2,
         "has_js": "true"
@@ -106,7 +106,7 @@
     {
         "component": "side-drawer",
         "category": "components",
-        "description": "Panel po lev\u00e9 stran\u011b administrace. Obsahuje komponentu nav-global. P\u0159i \u0161\u00ed\u0159kov\u00e9m zm\u011bn\u0161en\u00ed displeje je vysouvateln\u00fd p\u0159es &quot;hamburger&quot; ikonu, kter\u00e1 je um\u00edst\u011bn\u00e1 v komponent\u011b header-global.",
+        "description": "Panel po lev\u00e9 stran\u011b administrace. Standartn\u011b obsahuje komponentu nav-global. P\u0159i \u0161\u00ed\u0159kov\u00e9m zm\u011bn\u0161en\u00ed displeje je vysouvateln\u00fd p\u0159es \"hamburger\" ikonu, kter\u00e1 je um\u00edst\u011bn\u00e1 v komponent\u011b header-global.",
         "backgroundColor": "",
         "order": -12,
         "has_js": "true"
